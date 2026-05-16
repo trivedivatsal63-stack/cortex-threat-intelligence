@@ -29,6 +29,7 @@ from processors.cve_processor import CVEProcessor
 from processors.ioc_processor import IOCProcessor
 from processors.india_processor import IndiaProcessor
 from ai_engine.groq_client import groq_client
+from ai_engine.embeddings import embedding_generator
 from database.connection import db as database
 from database.supabase_client import supabase
 from reports.generator import ReportGenerator
@@ -95,6 +96,9 @@ class ThreatIntelPipeline:
         
         # Stage 4: Store
         results["storage"] = self._run_storage(results["processing"])
+        
+        # Stage 4.5: Generate vector embeddings for semantic search
+        results["embeddings"] = self._run_embeddings(results["processing"])
         
         # Stage 5: Generate Reports
         results["reports"] = self._run_reports(results["processing"])
@@ -240,6 +244,21 @@ class ThreatIntelPipeline:
         logger.info(f"Storage complete: {storage_stats}")
         return storage_stats
     
+    def _run_embeddings(self, processed: Dict) -> Dict[str, int]:
+        """Stage 4.5: Generate vector embeddings for stored records."""
+        logger.info("🧬 STAGE 4.5: EMBEDDING GENERATION")
+        stats = {"articles": 0, "cves": 0, "iocs": 0, "india_alerts": 0, "india_scams": 0}
+        try:
+            stats["articles"] = embedding_generator.generate_and_store("articles", processed.get("articles", []))
+            stats["cves"] = embedding_generator.generate_and_store("cves", processed.get("cves", []))
+            stats["iocs"] = embedding_generator.generate_and_store("iocs", processed.get("iocs", []), text_field="ioc_value")
+            stats["india_alerts"] = embedding_generator.generate_and_store("india_cyber_alerts", processed.get("india_alerts", []))
+            stats["india_scams"] = embedding_generator.generate_and_store("india_scam_tracking", processed.get("india_scams", []), text_field="scam_name")
+        except Exception as e:
+            logger.error(f"Embedding generation failed: {e}")
+        logger.info(f"Embeddings stored: {stats}")
+        return stats
+
     def _run_reports(self, processed: Dict) -> Dict[str, Any]:
         """Stage 5: Generate intelligence reports."""
         logger.info("📊 STAGE 5: REPORT GENERATION")

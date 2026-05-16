@@ -61,12 +61,13 @@ class IndiaThreatCollector:
             
             source_name = INDIA_SOURCES[i].name
             for item in collection:
-                # Enrich with India-specific metadata
                 enriched = self._enrich_india_item(item, source_name)
+                # Route to appropriate collections
                 if enriched.get("alert_type"):
                     results["alerts"].append(enriched)
-                elif enriched.get("scam_type"):
+                if enriched.get("scam_type"):
                     results["scams"].append(enriched)
+                    results["articles"].append(enriched)
                 else:
                     results["articles"].append(enriched)
         
@@ -144,18 +145,21 @@ class IndiaThreatCollector:
     def _detect_scam_type(self, text: str) -> Optional[str]:
         """Detect the type of Indian scam based on keywords."""
         scam_patterns = {
-            "upi-fraud": ["upi", "upi fraud", "gpay", "phonepe", "paytm", "upi scam"],
-            "fake-kyc": ["kyc", "kyc scam", "kyc fraud", "fake kyc"],
-            "sim-swap": ["sim swap", "sim swapping", "sim card fraud"],
-            "aadhaar-scam": ["aadhaar", "aadhaar leak", "aadhaar scam"],
-            "trading-app-scam": ["trading app", "trading scam", "fake trading", "investment scam"],
-            "loan-app-scam": ["loan app", "instant loan", "loan scam"],
-            "whatsapp-scam": ["whatsapp", "whatsapp scam", "whatsapp fraud"],
-            "banking-fraud": ["bank fraud", "internet banking", "net banking fraud"],
-            "phishing-india": ["phishing india", "indian phishing", "fake domain"],
-            "crypto-scam": ["crypto", "bitcoin", "cryptocurrency scam"],
-            "olx-scam": ["olx", "olx fraud", "olx scam"],
-            "job-scam": ["job scam", "fake job", "employment fraud"],
+            "upi-fraud": ["upi", "upi fraud", "gpay", "phonepe", "paytm", "upi scam", "upI"],
+            "fake-kyc": ["kyc", "kyc scam", "kyc fraud", "fake kyc", "know your customer"],
+            "sim-swap": ["sim swap", "sim swapping", "sim card fraud", "sim replacement"],
+            "aadhaar-scam": ["aadhaar", "aadhaar leak", "aadhaar scam", "aadhar", "aadhar card"],
+            "trading-app-scam": ["trading app", "trading scam", "fake trading", "investment scam", "stock market scam"],
+            "loan-app-scam": ["loan app", "instant loan", "loan scam", "digital loan"],
+            "whatsapp-scam": ["whatsapp", "whatsapp scam", "whatsapp fraud", "telegram scam"],
+            "banking-fraud": ["bank fraud", "internet banking", "net banking fraud", "bank scam", "banking malware", "banking trojan"],
+            "phishing-india": ["phishing india", "indian phishing", "fake domain", "phishing", "smishing"],
+            "crypto-scam": ["crypto", "bitcoin", "cryptocurrency scam", "crypto fraud"],
+            "olx-scam": ["olx", "olx fraud", "olx scam", "facebook marketplace scam"],
+            "job-scam": ["job scam", "fake job", "employment fraud", "work from home scam"],
+            "digital-arrest": ["digital arrest", "digital arrest scam", "federal crime", "traffic police scam"],
+            "cyber-crime": ["cyber crime", "cyber fraud", "online fraud", "cyberattack india",
+                           "indian cyber", "cyber threat india", "cybersecurity india"],
         }
         
         for scam_type, keywords in scam_patterns.items():

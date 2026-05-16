@@ -314,7 +314,7 @@ CREATE TABLE IF NOT EXISTS embeddings (
     source_table VARCHAR(50) NOT NULL,
     source_id UUID NOT NULL,
     content_text TEXT NOT NULL,
-    embedding vector(1536),  -- OpenAI ada-002 dimension; adjust for other models
+    embedding vector(384),  -- all-MiniLM-L6-v2 dimension
     model VARCHAR(100),
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

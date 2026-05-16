@@ -199,19 +199,14 @@ INDIA_SOURCES: List[DataSource] = [
         lookback_days=7,
     ),
     DataSource(
-        name="DSCI (Data Security Council of India)",
-        source_type="rss",
-        url="https://www.dsci.in/rss.xml",
-    ),
-    DataSource(
         name="Medianama Cybersecurity",
         source_type="rss",
-        url="https://www.medianama.com/category/cybersecurity/feed/",
+        url="https://www.medianama.com/feed/",
     ),
     DataSource(
-        name="Indian Express Cybersecurity",
+        name="Indian Express Technology",
         source_type="rss",
-        url="https://indianexpress.com/section/technology/cyber-security/feed/",
+        url="https://indianexpress.com/section/technology/feed/",
     ),
     DataSource(
         name="Times of India Cybercrime",
