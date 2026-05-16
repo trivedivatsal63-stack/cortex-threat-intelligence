@@ -48,8 +48,12 @@ data/*
 !data/.gitkeep
 
 # Reports
-reports/*
+reports/__pycache__/
+reports/*.md
+reports/*.html
 !reports/.gitkeep
+!reports/__init__.py
+!reports/generator.py
 
 # Notebook checkpoints
 .ipynb_checkpoints/
