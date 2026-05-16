@@ -2,7 +2,7 @@ name: AI Processing & Storage
 on:
   schedule:
     # Run every 8 hours (offset from scraping)
-    - cron: '0 4 */8 * *'
+    - cron: '0 */8 * * *'
   workflow_dispatch:
 
 jobs:

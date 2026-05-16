@@ -2,7 +2,7 @@ name: Alert Dispatch
 on:
   schedule:
     # Run shortly after processing to send critical alerts
-    - cron: '30 4 */8 * *'
+    - cron: '30 */8 * * *'
   workflow_dispatch:
 
 jobs:
