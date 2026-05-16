@@ -33,13 +33,14 @@ class DatabaseManager:
         """
         Initialize the database connection pool.
         Must be called before any database operations.
+        Non-critical: pipeline can still use Supabase HTTP client if DB fails.
         """
         if self._initialized:
             return
         
         db_url = config.database.database_url
         if not db_url:
-            logger.warning("DATABASE_URL not configured. Database features disabled.")
+            logger.warning("DATABASE_URL not configured. SQLAlchemy features disabled (Supabase HTTP client still works).")
             return
         
         try:
@@ -48,8 +49,8 @@ class DatabaseManager:
                 poolclass=QueuePool,
                 pool_size=config.database.pool_size,
                 max_overflow=config.database.max_overflow,
-                pool_pre_ping=True,  # Verify connections before use
-                pool_recycle=3600,   # Recycle connections after 1 hour
+                pool_pre_ping=True,
+                pool_recycle=3600,
                 echo=config.debug,
             )
             self._session_maker = sessionmaker(
@@ -60,8 +61,9 @@ class DatabaseManager:
             self._initialized = True
             logger.info("Database connection pool initialized successfully")
         except Exception as e:
-            logger.error(f"Failed to initialize database: {e}")
-            raise
+            logger.error(f"SQLAlchemy connection unavailable (DATABASE_URL may be missing or malformed): {e}")
+            logger.warning("Continuing with Supabase HTTP client only - data operations will still work.")
+            self._initialized = False
     
     @contextmanager
     def get_session(self) -> Generator[Session, None, None]:
@@ -75,6 +77,8 @@ class DatabaseManager:
         """
         if not self._initialized:
             self.initialize()
+        if not self._session_maker:
+            raise RuntimeError("Database not initialized (DATABASE_URL may be missing)")
         
         session: Session = self._session_maker()
         try:
@@ -158,7 +162,7 @@ class DatabaseManager:
     @property
     def is_connected(self) -> bool:
         """Check if database is initialized and reachable."""
-        if not self._initialized:
+        if not self._initialized or not self._session_maker:
             return False
         try:
             with self.get_session() as session:
