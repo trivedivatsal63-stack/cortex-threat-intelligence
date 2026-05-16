@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Main threat intelligence pipeline
+  collector:
+    build: .
+    container_name: cyber-intel-collector
+    command: python main.py --collect-only
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    restart: unless-stopped
+    networks:
+      - cyber-intel-network
+
+  # AI processing service
+  processor:
+    build: .
+    container_name: cyber-intel-processor
+    command: python main.py
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs
+      - ./reports:/app/reports
+    depends_on:
+      - collector
+    restart: unless-stopped
+    networks:
+      - cyber-intel-network
+
+  # FastAPI REST API server
+  api:
+    build: .
+    container_name: cyber-intel-api
+    command: uvicorn api.server:app --host 0.0.0.0 --port 8000 --reload
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - cyber-intel-network
+
+  # Streamlit dashboard (optional)
+  dashboard:
+    build: .
+    container_name: cyber-intel-dashboard
+    command: streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0
+    env_file: .env
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - api
+    restart: unless-stopped
+    networks:
+      - cyber-intel-network
+
+networks:
+  cyber-intel-network:
+    driver: bridge

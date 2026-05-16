@@ -1,0 +1,26 @@
+🚨 **{{ severity }} ALERT: {{ title }}**
+
+**Type:** {{ threat_type }}
+**Source:** {{ source }}
+**Published:** {{ published_date }}
+
+**Summary:**
+{{ summary }}
+
+{% if cve_ids %}
+**CVE IDs:** {{ cve_ids | join(', ') }}
+{% endif %}
+
+{% if affected_systems %}
+**Affected Systems:** {{ affected_systems }}
+{% endif %}
+
+{% if recommendation %}
+**Recommendation:** {{ recommendation }}
+{% endif %}
+
+**URL:** {{ url }}
+
+---
+
+*Sent by Cyber Threat Intelligence Platform*
