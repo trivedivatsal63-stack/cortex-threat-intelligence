@@ -225,52 +225,17 @@ class ThreatIntelPipeline:
         return ai_stats
     
     def _run_storage(self, processed: Dict) -> Dict[str, int]:
-        """Stage 4: Store processed data in database."""
+        """Stage 4: Store processed data in database using batch upserts."""
         logger.info("💾 STAGE 4: DATABASE STORAGE")
         
         storage_stats = {"articles": 0, "cves": 0, "iocs": 0, "india_alerts": 0, "india_scams": 0}
         
-        # Store articles
-        for article in processed.get("articles", []):
-            try:
-                supabase.upsert("articles", article, on_conflict="content_hash")
-                storage_stats["articles"] += 1
-            except Exception as e:
-                logger.warning(f"Failed to store article: {e}")
-                continue
-        
-        # Store CVEs
-        for cve in processed.get("cves", []):
-            try:
-                supabase.upsert("cves", cve, on_conflict="cve_hash")
-                storage_stats["cves"] += 1
-            except Exception as e:
-                logger.warning(f"Failed to store CVE: {e}")
-                continue
-        
-        # Store IOCs
-        for ioc in processed.get("iocs", []):
-            try:
-                supabase.upsert("iocs", ioc, on_conflict="ioc_hash")
-                storage_stats["iocs"] += 1
-            except Exception as e:
-                continue
-        
-        # Store India alerts
-        for alert in processed.get("india_alerts", []):
-            try:
-                supabase.upsert("india_cyber_alerts", alert, on_conflict="content_hash")
-                storage_stats["india_alerts"] += 1
-            except Exception as e:
-                continue
-        
-        # Store India scams
-        for scam in processed.get("india_scams", []):
-            try:
-                supabase.upsert("india_scam_tracking", scam, on_conflict="content_hash")
-                storage_stats["india_scams"] += 1
-            except Exception as e:
-                continue
+        # Batch store each type (much faster than individual upserts)
+        storage_stats["articles"] = supabase.batch_upsert("articles", processed.get("articles", []), on_conflict="content_hash")
+        storage_stats["cves"] = supabase.batch_upsert("cves", processed.get("cves", []), on_conflict="cve_hash")
+        storage_stats["iocs"] = supabase.batch_upsert("iocs", processed.get("iocs", []), on_conflict="ioc_hash")
+        storage_stats["india_alerts"] = supabase.batch_upsert("india_cyber_alerts", processed.get("india_alerts", []), on_conflict="content_hash")
+        storage_stats["india_scams"] = supabase.batch_upsert("india_scam_tracking", processed.get("india_scams", []), on_conflict="content_hash")
         
         logger.info(f"Storage complete: {storage_stats}")
         return storage_stats

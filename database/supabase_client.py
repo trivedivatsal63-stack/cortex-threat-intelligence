@@ -79,27 +79,51 @@ class SupabaseClient:
     def upsert(self, table: str, data: Dict[str, Any], on_conflict: str = "content_hash") -> Optional[Dict]:
         """
         Insert with deduplication. Uses PostgreSQL ON CONFLICT.
+        Returns the record if stored or already exists.
         """
         try:
             headers = {
                 "Prefer": "return=representation",
                 "resolution": "merge-duplicates",
             }
-            # Add on_conflict as query param
-            params = {"on_conflict": on_conflict}
             r = self._request("POST", f"{table}?on_conflict={on_conflict}", 
                              json=data, headers=headers)
-            if r.status_code == 201:
+            if r.status_code in (200, 201):
                 result = r.json()
                 return result[0] if isinstance(result, list) and result else result
-            if r.status_code == 200:
-                result = r.json()
-                return result[0] if isinstance(result, list) and result else result
+            # 409 = duplicate already exists (data is already in DB = success)
+            if r.status_code == 409:
+                return data
             logger.warning(f"Upsert into {table} returned {r.status_code}: {r.text[:200]}")
             return None
         except Exception as e:
             logger.error(f"Supabase upsert error in {table}: {e}")
             return None
+
+    def batch_upsert(self, table: str, records: List[Dict[str, Any]], on_conflict: str = "content_hash") -> int:
+        """
+        Batch upsert multiple records in a single HTTP request.
+        Much faster than individual upserts for large datasets.
+        Returns count of successfully stored records.
+        """
+        if not records:
+            return 0
+        try:
+            headers = {
+                "Prefer": "return=minimal",
+                "resolution": "merge-duplicates",
+            }
+            r = self._request("POST", f"{table}?on_conflict={on_conflict}", 
+                             json=records, headers=headers)
+            if r.status_code in (200, 201):
+                return len(records)
+            if r.status_code == 409:
+                return len(records)
+            logger.warning(f"Batch upsert into {table} returned {r.status_code}: {r.text[:200]}")
+            return 0
+        except Exception as e:
+            logger.error(f"Supabase batch upsert error in {table}: {e}")
+            return 0
     
     def select(self, table: str, columns: str = "*",
                filters: Optional[Dict] = None,
