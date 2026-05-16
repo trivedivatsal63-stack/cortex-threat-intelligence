@@ -40,16 +40,13 @@ class EmbeddingGenerator:
         stored = 0
         for record in records:
             try:
-                source_id = record.get(id_field)
-                if not source_id:
-                    continue
-                text = f"{record.get('title', '')} {record.get('description') or record.get('ai_summary') or record.get('summary') or ''}"
-                if not text.strip():
+                # Use content_hash as dedup key since DB IDs aren't available pre-insert
+                content_hash = record.get("content_hash")
+                if not content_hash:
                     continue
 
-                existing = supabase.select("embeddings",
-                    filters={"source_table": table, "source_id": source_id}, limit=1)
-                if existing:
+                text = f"{record.get('title', '')} {record.get('description') or record.get('ai_summary') or record.get('summary') or ''}"
+                if not text.strip():
                     continue
 
                 vector = self.encode(text[:3000])
@@ -58,15 +55,16 @@ class EmbeddingGenerator:
 
                 data = {
                     "source_table": table,
-                    "source_id": source_id,
+                    "source_id": content_hash,
                     "content_text": text[:2000],
                     "embedding": vector,
                     "model": self.model_name,
+                    "content_hash": content_hash,
                 }
-                supabase.insert("embeddings", data)
+                supabase.upsert("embeddings", data, on_conflict="content_hash")
                 stored += 1
             except Exception as e:
-                logger.warning(f"Embedding error for {table}/{record.get(id_field, '?')}: {e}")
+                logger.warning(f"Embedding error for {table}/{record.get('content_hash', '?')}: {e}")
                 continue
 
         return stored

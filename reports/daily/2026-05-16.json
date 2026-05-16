@@ -1,0 +1,1183 @@
+{
+  "report_date": "2026-05-16",
+  "generated_at": "2026-05-16 09:37 UTC",
+  "executive_summary": "**Executive Summary: Daily Cybersecurity Threat Intelligence Report**\n\n**Current Threat Landscape Overview**\n\nThe current threat landscape remains dynamic, with a significant number of vulnerabilities and potential threats identified today. Our daily threat intelligence report highlights a total of 535 articles, 1592 Critical Vulnerabilities (CVEs), and 1 reported ransomware incident. This surge in vulnerabilities underscores the importance of proactive threat management and continuous monitoring to mitigate potential risks.\n\n**Most Critical Threats Requiring Immediate Attention**\n\nThe most pressing threat identified today is the 1592 Critical CVEs, which pose a substantial risk to our organization's security posture. These vulnerabilities, if exploited, could lead to unauthorized access, data breaches, or system compromise. In light of this, we strongly recommend that security teams prioritize patching and updating affected systems to minimize the risk of exploitation.\n\n**Key Trends Observed and Actionable Recommendations**\n\nKey trends observed in today's report include a notable increase in Critical CVEs and a single reported ransomware incident. To address these trends, we recommend that security teams:\n\n1. **Prioritize patching and updating**: Focus on addressing the 1592 Critical CVEs to minimize the risk of exploitation.\n2. **Enhance threat detection and response**: Implement or refine threat detection and response capabilities to quickly identify and contain potential threats.\n3. **Conduct regular vulnerability assessments**: Schedule regular vulnerability assessments to identify and address potential weaknesses before they can be exploited.\n4. **Develop a ransomware incident response plan**: Establish a comprehensive incident response plan to ensure swift and effective response in the event of a ransomware attack.\n\nBy taking these proactive steps, we can reduce the risk of a security breach and maintain a robust security posture.",
+  "stats": {
+    "total_articles": 535,
+    "total_cves": 1592,
+    "critical_count": 1592,
+    "high_count": 0,
+    "total_iocs": 0,
+    "india_count": 0,
+    "ransomware_count": 1,
+    "phishing_count": 0
+  },
+  "critical_cves": [
+    {
+      "cve_id": "CVE-2026-42897",
+      "cve_hash": "f5c71f3a3f12b31e932e33d8f248c8a2",
+      "description": "Microsoft Exchange Server contains a cross-site scripting vulnerability during web page generation in Outlook Web Access and when certain interaction conditions are met, arbitrary JavaScript can be executed in the browser context.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [
+        "T1190 - Exploit Public-Facing Application"
+      ],
+      "mitre_tactics": [],
+      "ai_summary": "Microsoft Exchange Server contains a cross-site scripting vulnerability that allows arbitrary JavaScript execution in the browser context when certain interaction conditions are met during web page generation in Outlook Web Access.",
+      "ai_classification": "XSS",
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:41.632297+00:00",
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-29",
+        "exploit_maturity": "Theoretical",
+        "patch_priority": "Immediate",
+        "ai_recommendation": "Apply the latest security patches from Microsoft to resolve the vulnerability."
+      }
+    },
+    {
+      "cve_id": "CVE-2026-20182",
+      "cve_hash": "3cc327d1afa581a17d268253eaf0bc11",
+      "description": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability that allows an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [
+        "T1210 - Exploit Public-Facing Application"
+      ],
+      "mitre_tactics": [],
+      "ai_summary": "Cisco Catalyst SD-WAN Controller & Manager contain an authentication bypass vulnerability allowing an unauthenticated attacker to obtain administrative privileges.",
+      "ai_classification": "Authentication Bypass",
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:48.774858+00:00",
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Please adhere to CISA\u2019s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlined in CISA\u2019s Emergency Directive 26-03 (URL listed below in Notes) and CISA\u2019s Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.",
+        "cisa_due_date": "2026-05-17",
+        "exploit_maturity": "Active",
+        "patch_priority": "Immediate",
+        "ai_recommendation": "Apply the latest security patches from Cisco to remediate the vulnerability."
+      }
+    },
+    {
+      "cve_id": "CVE-2026-42208",
+      "cve_hash": "3ce5863bc69f29e766cf2a35550dcc56",
+      "description": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorized access to the proxy and the credentials it manages.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [
+        "T1055",
+        "T1078"
+      ],
+      "mitre_tactics": [],
+      "ai_summary": "BerriAI LiteLLM contains a SQL injection vulnerability that allows an attacker to read data from the proxy's database and potentially modify it, leading to unauthorized access to the proxy and the credentials it manages.",
+      "ai_classification": "SQLi",
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:49.986936+00:00",
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-11",
+        "exploit_maturity": "Active",
+        "patch_priority": "Immediate",
+        "ai_recommendation": "Update to the latest version of BerriAI LiteLLM or apply the provided patch to resolve the SQL injection vulnerability."
+      }
+    },
+    {
+      "cve_id": "CVE-2026-6973",
+      "cve_hash": "ddcab6b1e5ed5314929c379b1ddd6603",
+      "description": "Ivanti Endpoint Manager Mobile (EPMM) contains an improper input validation vulnerability that allows a remotely authenticated user with administrative access to achieve remote code execution.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [
+        "T1210 - Exploit Public-Facing Application"
+      ],
+      "mitre_tactics": [],
+      "ai_summary": "Ivanti Endpoint Manager Mobile (EPMM) contains an improper input validation vulnerability that allows a remotely authenticated user with administrative access to achieve remote code execution.",
+      "ai_classification": "RCE",
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:57.102632+00:00",
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-10",
+        "exploit_maturity": "Active",
+        "patch_priority": "Immediate",
+        "ai_recommendation": "Apply the latest patch or update from Ivanti to resolve the vulnerability."
+      }
+    },
+    {
+      "cve_id": "CVE-2026-0300",
+      "cve_hash": "fed24c9a1ee50539ff304e40df7241d2",
+      "description": "Palo Alto Networks PAN-OS contains an out-of-bounds write vulnerability in the User-ID Authentication Portal (aka Captive Portal) service that can allow an unauthenticated attacker to execute arbitrary code with root privileges on the PA-Series and VM-Series firewalls by sending specially crafted packets.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [
+        "T1210 - Exploit Public-Facing Application"
+      ],
+      "mitre_tactics": [],
+      "ai_summary": "Palo Alto Networks PAN-OS contains an out-of-bounds write vulnerability in the User-ID Authentication Portal service, allowing an unauthenticated attacker to execute arbitrary code with root privileges.",
+      "ai_classification": "RCE",
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:58.373041+00:00",
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable. Until the vendor releases an official fix, the following workaround should be implemented:  - Restrict User-ID Authentication Portal access to only trusted zones.  - Disable User-ID Authentication Portal if not required. 5/13/2026: Palo Alto has released a variety of patches. If these are relevant to your environment, please apply the designated patch.",
+        "cisa_due_date": "2026-05-09",
+        "exploit_maturity": "Active",
+        "patch_priority": "Immediate",
+        "ai_recommendation": "Apply the latest available patch from Palo Alto Networks to fix the vulnerability."
+      }
+    },
+    {
+      "cve_id": "CVE-2026-31431",
+      "cve_hash": "1aa247ad1e097c9135f890976f8f1abf",
+      "description": "Linux Kernel contains an incorrect resource transfer between spheres vulnerability that could allow for privilege escalation.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [],
+      "mitre_tactics": [],
+      "ai_summary": null,
+      "ai_classification": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "\"Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-15"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-41940",
+      "cve_hash": "d4c903cf5e7f1b4ae728b16a404bddd0",
+      "description": "WebPros cPanel & WHM (WebHost Manager) and WP2 (WordPress Squared) contain an authentication bypass vulnerability in the login flow that allows unauthenticated remote attackers to gain unauthorized access to the control panel.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [],
+      "mitre_tactics": [],
+      "ai_summary": null,
+      "ai_classification": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-03"
+      }
+    },
+    {
+      "cve_id": "CVE-2024-1708",
+      "cve_hash": "751a58a829f98cee47bc650c7a12e341",
+      "description": "ConnectWise ScreenConnect contains a path traversal vulnerability which could allow an attacker to execute remote code or directly impact confidential data and critical systems.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [],
+      "mitre_tactics": [],
+      "ai_summary": null,
+      "ai_classification": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-12"
+      }
+    },
+    {
+      "cve_id": "CVE-2026-32202",
+      "cve_hash": "d100c69f29db3822bc10ff1441e54e2f",
+      "description": "Microsoft Windows Shell contains a protection mechanism failure vulnerability that allows an unauthorized attacker to perform spoofing over a network.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [],
+      "mitre_tactics": [],
+      "ai_summary": null,
+      "ai_classification": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-12"
+      }
+    },
+    {
+      "cve_id": "CVE-2025-29635",
+      "cve_hash": "ea3654ff33c27aca19a124cc57c48e68",
+      "description": "D-Link DIR-823X contains a command injection vulnerability that allows an authorized attacker to execute arbitrary commands on remote devices by sending a POST request to /goform/set_prohibiting via the corresponding function. The impacted product could be end-of-life (EoL) and/or end-of-service (EoS). Users should discontinue product utilization.",
+      "cvss_v2_score": null,
+      "cvss_v3_score": null,
+      "severity": "CRITICAL",
+      "exploit_available": true,
+      "exploit_references": [],
+      "affected_vendors": [],
+      "affected_products": [],
+      "attack_vector": null,
+      "published_date": null,
+      "last_modified": null,
+      "mitre_techniques": [],
+      "mitre_tactics": [],
+      "ai_summary": null,
+      "ai_classification": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "metadata": {
+        "source_type": "api",
+        "cisa_kev": true,
+        "cisa_required_action": "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.",
+        "cisa_due_date": "2026-05-08"
+      }
+    }
+  ],
+  "high_threats": [
+    {
+      "title": "Defending Against China-Nexus Covert Networks of Compromised Devices",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-113a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2026-04-21T15:12:37+00:00",
+      "scraped_at": "2026-05-16T09:34:22.004045+00:00",
+      "article_content": null,
+      "cleaned_content": "Defending against china-nexus covert networks of compromised devices executive summary Defending against China-nexus covert networks of compromised devices Explaining the widespread shift in tactics, techniques and procedures (TTPs) towards networks of compromised infrastructure, and how to defend against it Summary With support from the UK Cyber League , this advisory has been jointly released by the National Cyber Security Centre (NCSC-UK) and international partners: Australian Signals Directorate\u2019s (ASD\u2019s) Australian Cyber Security Centre (ACSC) Communications Security Establishment Canada\u2019s (CSE\u2019s) Canadian Centre for Cyber Security (Cyber Centre) Germany Federal Office for the Protection of the Constitution - Bundesamt f\u00fcr Verfassungsschutz (BfV) Germany Federal Intelligence Service \u2013 Bundesnachrichtendienst (BND) Germany Federal Office for Information Security - Bundesamt f\u00fcr Sicherheit in der Informationstechnik (BSI) Japan National Cybersecurity Office (NCO) - \u56fd\u5bb6\u30b5\u30a4\u30d0\u30fc\u7d71\u62ec\u5ba4 Netherlands General Intelligence and Security Service - Algemene Inlichtingen- en Veiligheidsdienst (AIVD) Netherlands Defence Intelligence and Security Service - Militaire Inlichtingen- en Veiligheidsdienst (MIVD) New Zealand National Cyber Security Centre (NCSC-NZ) Spain National Cryptologic Centre \u2013 Centro Criptol\u00f3gico Nacional (CCN) Sweden National Cyber Security Centre - Nationellt cybers\u00e4kerhetscenter (NCSC-SE) United States Cybersecurity and Infrastructure Security Agency (CISA) United States Department of Defense Cyber Crime Center (DC3) United States Federal Bureau of Investigation (FBI) United States National Security Agency (NSA) Its purpose is to provide network defenders with the tools needed to defend against China-nexus cyber actors and their tactic of using large scale networks of compromised devices (covert networks) to route their cyber activity. Introduction Over the past few years there has been a major shift in the tactics, techniques and procedures (TTPs) used by China-nexus cyber actors, moving away from the use of individually procured infrastructure, and towards the use of externally provisioned, large-scale networks of compromised devices. The NCSC believes that the majority of China-nexus threat actors are using these networks (hereafter \u201ccovert networks\u201d), that multiple covert networks have been created and are being constantly updated, and that a single covert network could be being used by multiple actors. These networks are mainly made up of compromised Small Office Home Office (SOHO) routers, as well as Internet of Things (IoT) and smart devices. Anyone who is a target of China-nexus cyber actors may be impacted by the use of covert networks. They have been used by Chinese state-sponsored actors Volt Typhoon to pre-position offensive cyber capabilities on critical national infrastructure. The group Flax Typhoon used a different covert network of compromised infrastructure to conduct cyber espionage. The use of covert networks of compromised devices - also known as botnets - to facilitate malicious cyber activity is not new, but China-nexus cyber actors are now using them strategically, and at scale. This advisory describes the typical makeup of a covert network and what they are being used for. It also includes protective advice for organizations being targeted by cyber activity using a covert network as an access vector. Covert Networks Covert networks are used to connect across the internet in a low-cost, low-risk, deniable way, disguising the origin and attribution of malicious activity. Actors have been observed using them for each phase of their Cyber Kill Chains, from performing scans as part of reconnaissance, to the delivery of malware, communicating with said malware, and exfiltrating stolen data from a victim. They can also be used for general deniable internet browsing, allowing threat actors to research exploitation techniques, new TTPs, and their victims without attribution. Some covert networks are also used by legitimate customers to browse the internet, making it challenging to attribute malicious activity. There is evidence that covert networks used by China-nexus actors are created and maintained by Chinese information security companies. A network known to network defenders as Raptor Train, which in 2024 infected more than 200,000 devices worldwide, was controlled and managed by the Chinese company, Integrity Technology Group. This company was also assessed by the FBI to be responsible for the computer intrusion activities attributed to China-based hackers known as Flax Typhoon. Botnet operations represent a significant threat to the UK by exploiting vulnerabilities in everyday internet-connected devices with the potential to carry out large-scale cyber attacks \u2013 NCSC Director of Operations, Paul Chichester Covert networks mostly consist of compromised SOHO routers, but they also pull in any vulnerable device they can exploit at scale. Raptor Train was made up of thousands of SOHO routers and IoT devices, such as web cameras and video recorders, as well as firewalls and Network Attached Storage (NAS) devices. The KV Botnet used by Volt Typhoon was mainly made up of vulnerable Cisco and NetGear routers . The edge devices were vulnerable because they were \u201cend of life\u201d \u2013 out of date and no longer receiving updates or security patches by their manufacturers. The cyber security industry has been aware of examples of these networks for some time and has publicly reported on the widespread scale of the threat and its implications. Mandiant Intelligence produced a public blog in May 2024 talking about covert networks in which they highlighted a key issue for defenders \u2013 indicator of compromise (IOC) Extinction. If a particular threat group could now come from one of many covert networks, each with potentially hundreds of thousands of endpoints, and each used by multiple threat actors, old network defense paradigms of static malicious IP block lists will be less effective. This is compounded by the dynamic nature of these networks where new nodes will be added as old devices are patched or removed from use. Typical Network Topology The number of covert networks used by China-nexus cyber actors is large, with new networks regularly developed and deployed. The existing covert networks change too, either because of defensive or legal action, or simply as a result of software updates and new exploits being used to target different technologies for incorporation into the network. Because of this, a description of all known covert networks in detail, including how they are constructed and how they communicate, would immediately be out of date \u2013 and for most network defenders would not be practically useful. However, most covert networks of compromised devices use the same basic set up. Understanding this generalized structure can aid researchers and defenders by helping them to understand which part of a network they may have found, and how to defend against it.",
+      "summary": "China-nexus cyber actors are using large-scale networks of compromised devices (covert networks) to route their cyber activity, posing a significant threat to network defenders.",
+      "tags": [
+        "cyber activity",
+        "compromised devices",
+        "China-nexus",
+        "covert networks"
+      ],
+      "cve_ids": [],
+      "threat_category": "APT",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:34:24.295971+00:00",
+      "content_hash": "4feca54f19bd5f8b97e4b461bb78939c",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1043,
+        "malware_families": [
+          "Volt Typhoon",
+          "Flax Typhoon"
+        ],
+        "threat_actors": [
+          "China-nexus cyber actors",
+          "Volt Typhoon",
+          "Flax Typhoon"
+        ]
+      }
+    },
+    {
+      "title": "CISA Shares Lessons Learned from an Incident Response Engagement",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-266a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-09-22T15:12:49+00:00",
+      "scraped_at": "2026-05-16T09:34:22.034491+00:00",
+      "article_content": null,
+      "cleaned_content": "Advisory at a Glance Executive Summary CISA began incident response efforts at a U.S. federal civilian executive branch (FCEB) agency following the detection of potential malicious activity identified through security alerts generated by the agency\u2019s endpoint detection and response (EDR) tool. CISA identified three lessons learned from the engagement that illuminate how to effectively mitigate risk, prepare for, and respond to incidents: vulnerabilities were not promptly remediated, the agency did not test or exercise their incident response plan (IRP), and EDR alerts were not continuously reviewed. Key Actions Prevent compromise by prioritizing the patching of critical vulnerabilities in public-facing systems and known exploited vulnerabilities. Prepare for incidents by maintaining, practicing, and updating incident response plans. Prepare for incidents by implementing comprehensive and verbose logging and aggregate logs in a centralized out-of-band location. Indicators of Compromise For a downloadable copy of indicators of compromise, see: AA25-266A-JSON.stix_.json AA25-266A-STIX.stix_.xml Intended Audience Organizations: FCEB agencies and critical infrastructure organizations. Roles: Defensive Cybersecurity Analysts , Vulnerability Analysts , Security Systems Managers , Systems Security Analysts , and Cybersecurity Policy and Planning Professionals . Download the PDF version of this report AA25-266A advisory cisa shares lessons learned from ir engagement Introduction The Cybersecurity and Infrastructure Security Agency (CISA) is releasing this Cybersecurity Advisory to highlight lessons learned from an incident response engagement CISA conducted at a U.S. federal civilian executive branch (FCEB) agency. CISA is publicizing this advisory to reinforce the importance of prompt patching, as well as preparing for incidents by practicing incident response plans and by implementing logging and aggregating logs in a centralized out-of-band location. CISA is also raising awareness about the tactics, techniques, and procedures (TTPs) employed by these cyber threat actors to help organizations safeguard against similar exploits. CISA began incident response efforts at an FCEB agency after the agency identified potential malicious activity through security alerts generated by the agency\u2019s endpoint detection and response (EDR) tool. CISA discovered cyber threat actors compromised the agency by exploiting CVE-2024-36401 in a GeoServer about three weeks prior to the EDR alerts. Over the three-week period, the cyber threat actors gained separate initial access to a second GeoServer via the same vulnerability and moved laterally to two other servers. Leveraging insights CISA gleaned from the organization\u2019s security posture and response, CISA is sharing lessons learned for organizations to mitigate similar compromises (see Lessons Learned for more details): Vulnerabilities were not promptly remediated. The cyber threat actors exploited CVE-2024-36401 for initial access on two GeoServers. The vulnerability was disclosed 11 days prior to the cyber threat actors accessing the first GeoServer and 25 days prior to them accessing the second GeoServer. The agency did not test or exercise their incident response plan (IRP), nor did their IRP enable them to promptly engage third parties and grant third parties access to necessary resources. This delayed certain elements of CISA\u2019s response as the IRP did not have procedures for involving third-party assistance or for granting third-party access to their security tools. EDR alerts were not continuously reviewed, and some public-facing systems lacked endpoint protection. The activity remained undetected for three weeks; the agency missed an opportunity to detect this activity earlier as they did not observe an alert from a GeoServer and the Web Server did not have endpoint protection. These lessons highlight strategies to effectively mitigate risk, enhance preparedness, and respond to incidents with greater efficiency. CISA encourages all organizations to consider the lessons learned and apply the associated recommendations in the Mitigations section of this advisory to improve their security posture. This advisory also provides the cyber threat actors\u2019 TTPs and indicators of compromise (IOCs). For a downloadable copy of IOCs, see: AA25-266A-JSON.stix_.json AA25-266A-STIX.stix_.xml Technical Details Note: This advisory uses the MITRE ATT&CK \u00ae Matrix for Enterprise framework, version 17. See the MITRE ATT&CK Tactics and Techniques section of this advisory for a table of the threat actors\u2019 activity mapped to MITRE ATT&CK tactics and techniques. Threat Actor Activity CISA responded to a suspected compromise of a large FCEB agency after the agency\u2019s security operations center (SOC) observed multiple endpoint security alerts. During the incident response, CISA discovered that cyber threat actors gained access to the agency\u2019s network on July 11, 2024, by exploiting GeoServer vulnerability CVE 2024-36401 [ CWE-95: \u201cEval Injection\u201d ] on a public-facing GeoServer (GeoServer 1). This critical vulnerability, disclosed June 30, 2024, allows unauthenticated users to gain remote code execution (RCE) on affected GeoServer versions [1] . The cyber threat actors used this vulnerability to download open source tools and scripts and establish persistence in the agency\u2019s network. (CISA added this vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog on July 15, 2024.) After gaining initial access to GeoServer 1, the cyber threat actors gained separate initial access to a second GeoServer (GeoServer 2) on July 24, 2024, by exploiting the same vulnerability. They moved laterally from GeoServer 1 to a web server (Web Server) and then a Structured Query Language (SQL) server. On each server, they uploaded (or attempted to upload) web shells such as China Chopper , along with scripts designed for remote access, persistence, command execution, and privilege escalation. The cyber threat actors also used living off the land (LOTL) techniques. See Figure 1 for an overview of the cyber threat actors\u2019 activity and the following sections for detailed threat actors TTPs. Figure 1. Overview of Threat Actor Activity",
+      "summary": "CISA shares lessons learned from an incident response engagement, highlighting the importance of prompt patching, practicing incident response plans, and implementing logging and aggregating logs in a centralized out-of-band location.",
+      "tags": [
+        "incident-response",
+        "patching",
+        "logging",
+        "supply-chain-attack"
+      ],
+      "cve_ids": [
+        "CVE-2024-36401",
+        "CVE-2016-5195"
+      ],
+      "threat_category": "supply-chain",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:28.462134+00:00",
+      "content_hash": "8c07b5dc8ebfb2a2515fdf1811c4bc53",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 891
+      }
+    },
+    {
+      "title": "Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-08-25T13:36:40+00:00",
+      "scraped_at": "2026-05-16T09:34:22.042708+00:00",
+      "article_content": null,
+      "cleaned_content": "Executive summary People\u2019s Republic of China (PRC) state-sponsored cyber threat actors are targeting networks globally, including, but not limited to, telecommunications, government, transportation, lodging, and military infrastructure networks. While these actors focus on large backbone routers of major telecommunications providers, as well as provider edge (PE) and customer edge (CE) routers, they also leverage compromised devices and trusted connections to pivot into other networks. These actors often modify routers to maintain persistent, long-term access to networks. This activity partially overlaps with cyber threat actor reporting by the cybersecurity industry\u2014commonly referred to as Salt Typhoon, OPERATOR PANDA, RedMike, UNC5807, and GhostEmperor, among others. The authoring agencies are not adopting a particular commercial naming convention and hereafter refer to those responsible for the cyber threat activity more generically as \u201cAdvanced Persistent Threat (APT) actors\u201d throughout this advisory. This cluster of cyber threat activity has been observed in the United States, Australia, Canada, New Zealand, the United Kingdom, and other areas globally. This Cybersecurity Advisory (CSA) includes observations from various government and industry investigations where the APT actors targeted internal enterprise environments, as well as systems and networks that deliver services directly to customers. This CSA details the tactics, techniques, and procedures (TTPs) leveraged by these APT actors to facilitate detection and threat hunting, and provides mitigation guidance to reduce the risk from these APT actors and their TTPs. This CSA is being released by the following authoring and co-sealing agencies: United States National Security Agency (NSA) United States Cybersecurity and Infrastructure Security Agency (CISA) United States Federal Bureau of Investigation (FBI) United States Department of Defense Cyber Crime Center (DC3) Australian Signals Directorate\u2019s Australian Cyber Security Centre (ASD\u2019s ACSC) Canadian Centre for Cyber Security (Cyber Centre) Canadian Security Intelligence Service (CSIS) New Zealand National Cyber Security Centre (NCSC-NZ) United Kingdom National Cyber Security Centre (NCSC-UK) Czech Republic National Cyber and Information Security Agency (N\u00daKIB) - N\u00e1rodn\u00ed \u00fa\u0159ad pro kybernetickou a informa\u010dn\u00ed bezpe\u010dnost Finnish Security and Intelligence Service (SUPO) - Suojelupoliisi Germany Federal Intelligence Service (BND) - Bundesnachrichtendienst Germany Federal Office for the Protection of the Constitution (BfV) - Bundesamt f\u00fcr Verfassungsschutz Germany Federal Office for Information Security (BSI) - Bundesamt f\u00fcr Sicherheit in der Informationstechnik Italian External Intelligence and Security Agency (AISE) - Agenzia Informazioni e Sicurezza Esterna Italian Internal Intelligence and Security Agency (AISI) - Agenzia Informazioni e Sicurezza Interna Japan National Cybersecurity Office (NCO) - \u56fd\u5bb6\u30b5\u30a4\u30d0\u30fc\u7d71\u62ec\u5ba4 Japan National Police Agency (NPA) - \u8b66\u5bdf\u5e81 Netherlands Defence Intelligence and Security Service (MIVD) - Militaire Inlichtingen- en Veiligheidsdienst Netherlands General Intelligence and Security Service (AIVD) - Algemene Inlichtingen- en Veiligheidsdienst Polish Military Counterintelligence Service (SKW) - S\u0142u\u017cba Kontrwywiadu Wojskowego Polish Foreign Intelligence Agency (AW) - Agencja Wywiadu Spain National Intelligence Centre (CNI) - Centro Nacional de Inteligencia The authoring agencies strongly urge network defenders to hunt for malicious activity and to apply the mitigations in this CSA to reduce the threat of Chinese state-sponsored and other malicious cyber activity. Any mitigation or eviction measures listed within are subject to change as new information becomes available and ongoing coordinated operations dictate. Network defenders should ensure any actions taken in response to the CSA are compliant with local laws and regulations within the jurisdictions within which they operate. Background The APT actors have been performing malicious operations globally since at least 2021. These operations have been linked to multiple China-based entities, including at least Sichuan Juxinhe Network Technology Co. Ltd. (\u56db\u5ddd\u805a\u4fe1\u548c\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8), Beijing Huanyu Tianqiong Information Technology Co., Ltd. (\u5317\u4eac\u5bf0\u5b87\u5929\u7a79\u4fe1\u606f\u6280\u672f\u6709\u9650\u516c\u53f8), and Sichuan Zhixin Ruijie Network Technology Co., Ltd. (\u56db\u5ddd\u667a\u4fe1\u9510\u6377\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8). These companies provide cyber-related products and services to China\u2019s intelligence services, including multiple units in the People\u2019s Liberation Army and Ministry of State Security. The data stolen through this activity against foreign telecommunications and Internet service providers (ISPs), as well as intrusions in the lodging and transportation sectors, ultimately can provide Chinese intelligence services with the capability to identify and track their targets\u2019 communications and movements around the world. For more information on PRC state-sponsored malicious cyber activity, see CISA\u2019s People's Republic of China Cyber Threat Overview and Advisories webpage. Download the PDF version of this report: CSA COUNTERING CHINA STATE ACTORS COMPROMISE OF NETWORKS (PDF, 1.09 MB ) For a downloadable list of IOCs, visit: AA25-239A Countering Chinese State-Sponsored Actors Compromise of Networks to Feed Global Espionage System (JSON, 86.01 KB ) AA25-239A Countering Chinese State-Sponsored Actors Compromise of Networks to Feed Global Espionage System (XML, 66.50 KB ) Cybersecurity Industry Tracking The cybersecurity industry provides overlapping cyber threat intelligence, indicators of compromise (IOCs), and mitigation recommendations related to this Chinese state-sponsored cyber activity. While not all encompassing, the following are the most notable threat group names related to this activity and commonly used within the cybersecurity community: Salt Typhoon, OPERATOR PANDA, RedMike, UNC5807, and GhostEmperor. Note : Cybersecurity companies have different methods of tracking and attributing cyber actors, and this may not be a 1:1 correlation to the authoring agencies\u2019 understanding for all activity related to these groupings. Technical details The following sections are a compilation of TTPs the APT actors have used since at least 2021 to target enterprise environments. Particularly notable TTPs include modifying router configurations for lateral movement pivoting between networks and using virtualized containers on network devices to evade detection. The actors continue to use many of the TTPs listed, but expect them to evolve when existing TTPs no longer achieve their goals. Even if no longer used regularly, the actors may still use previous TTPs opportunistically in favorable conditions. The TTP descriptions can also be useful to network defenders for retroactive threat hunting. Note : This advisory uses the MITRE ATT&CK\u00ae for Enterprise framework, version 17 and MITRE ATT&CK for ICS framework, version 17 . See the Appendix A: MITRE ATT&CK Tactics and Techniques section of this advisory for a table of the APT actors\u2019 activity mapped to MITRE ATT&CK tactics and techniques. Initial access Investigations associated with these APT actors indicate that they are having considerable success exploiting publicly known common vulnerabilities and exposures (CVEs) and other avoidable weaknesses within compromised infrastructure [ T1190 ]. Exploitation of zero-day vulnerabilities has not been observed to date. The APT actors will likely continue to adapt their tactics as new vulnerabilities are discovered and as targets implement mitigations, and will likely expand their use of existing vulnerabilities. The following list is not exhaustive and the authoring agencies suspect that the APT actors may target other de",
+      "summary": "Chinese state-sponsored cyber threat actors are targeting networks globally, compromising large backbone routers and leveraging compromised devices and trusted connections to pivot into other networks.",
+      "tags": [
+        "cyber-espionage",
+        "APT",
+        "Chinese-state-sponsored"
+      ],
+      "cve_ids": [
+        "CVE-2023-20198",
+        "CVE-2018-0171",
+        "CVE-2024-21887",
+        "CVE-2023-46805",
+        "CVE-2024-3400",
+        "CVE-2023-20273"
+      ],
+      "threat_category": "APT",
+      "severity": "CRITICAL",
+      "is_india_related": true,
+      "india_keywords": [
+        "UPI"
+      ],
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:36.353178+00:00",
+      "content_hash": "b518601a1e3010fcfa22db363dca4221",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1064,
+        "threat_actors": [
+          "People's Republic of China (PRC) state-sponsored cyber threat actors"
+        ]
+      }
+    },
+    {
+      "title": "Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management to Compromise Utility Billing Software Provider",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-163a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-06-12T14:29:54+00:00",
+      "scraped_at": "2026-05-16T09:34:22.073928+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary The Cybersecurity and Infrastructure Security Agency (CISA) is releasing this advisory in response to ransomware actors leveraging unpatched instances of a vulnerability in SimpleHelp Remote Monitoring and Management (RMM) to compromise customers of a utility billing software provider. This incident reflects a broader pattern of ransomware actors targeting organizations through unpatched versions of SimpleHelp RMM since January 2025. SimpleHelp versions 5.5.7 and earlier contain several vulnerabilities, including CVE-2024-57727 \u2014a path traversal vulnerability. 1 Ransomware actors likely leveraged CVE-2024-57727 to access downstream customers\u2019 unpatched SimpleHelp RMM for disruption of services in double extortion compromises. 1 CISA added CVE-2024-57727 to its Known Exploited Vulnerabilities (KEV) Catalog on Feb. 13, 2025. CISA urges software vendors, downstream customers, and end users to immediately implement the Mitigations listed in this advisory based on confirmed compromise or risk of compromise. Download the PDF version of this report: AA25-163A Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management to Compromise Utility Billing Software Provider (PDF, 420.49 KB ) Mitigations CISA recommends organizations implement the mitigations below to respond to emerging ransomware activity exploiting SimpleHelp software. These mitigations align with the Cross-Sector Cybersecurity Performance Goals (CPGs) developed by CISA and the National Institute of Standards and Technology (NIST). The CPGs provide a minimum set of practices and protections that CISA and NIST recommend all organizations implement. CISA and NIST based the CPGs on existing cybersecurity frameworks and guidance to protect against the most common and impactful threats, tactics, techniques, and procedures. Visit CISA\u2019s CPGs webpage for more information on the CPGs, including additional recommended baseline protections. These mitigations apply to all critical infrastructure organizations. Vulnerable Third-Party Vendors If SimpleHelp is embedded or bundled in vendor-owned software or if a third-party service provider leverages SimpleHelp on a downstream customer\u2019s network, then identify the SimpleHelp server version at the top of the file <file_path>/SimpleHelp/configuration/serverconfig.xml . If version 5.5.7 or prior is found or has been used since January 2025, third-party vendors should: Isolate the SimpleHelp server instance from the internet or stop the server process. Upgrade immediately to the latest SimpleHelp version in accordance with SimpleHelp\u2019s security vulnerability advisory. 2 Contact your downstream customers to direct them to take actions to secure their endpoints and undertake threat hunting actions on their network. Vulnerable Downstream Customers and End Users Determine if the system is running an unpatched version of SimpleHelp RMM either directly or embedded in third-party software. SimpleHelp Endpoints Determine if an endpoint is running the remote access (RAS) service by checking the following paths depending on the specific environment: Windows: %APPDATA%\\JWrapper-Remote Access Linux: /opt/JWrapper-Remote Access MacOs: /Library/Application Support/JWrapper-Remote Access If RAS installation is present and running, open the serviceconfig.xml file in <file_path>/JWrapper-Remote Access/JWAppsSharedConfig/ to determine if the registered service is vulnerable. The lines starting with <ConnectTo indicate the server addresses where the service is registered. SimpleHelp Server Determine the version of any SimpleHelp server by performing an HTTP query against it. Add /allversions (e.g., https://simple-help.com/allversions ) to query the URL for the version page. This page will list the running version. If an unpatched SimpleHelp version 5.5.7 or earlier is confirmed on a system, organizations should conduct threat hunting actions for evidence of compromise and continuously monitor for unusual inbound and outbound traffic from the SimpleHelp server. Note: This is not an exhaustive list of indicators of compromise. Refer to SimpleHelp\u2019s guidance to determine compromise and next steps. 3 Isolate the SimpleHelp server instance from the internet or stop the server process. Search for any suspicious or anomalous executables with three alphabetic letter filenames (e.g., aaa.exe , bbb.exe , etc.) with a creation time after January 2025. Additionally, perform host and network vulnerability security scans via reputable scanning services to verify malware is not on the system. Even if there is no evidence of compromise, users should immediately upgrade to the latest SimpleHelp version in accordance with SimpleHelp\u2019s security vulnerabilities advisory. 4 If your organization is unable to immediately identify and patch vulnerable versions of SimpleHelp, apply appropriate workarounds. In this circumstance, CISA recommends using other vendor-provided mitigations when available. These non-patching workarounds should not be considered permanent fixes and organizations should apply the appropriate patch as soon as it is made available. Encrypted Downstream Customers and End Users If a system has been encrypted by ransomware: Disconnect the affected system from the internet. Use clean installation media (e.g., a bootable USD drive or DVD) to reinstall the operating system. Ensure the installation media is free from malware. Wipe the system and only restore data from a clean backup. Ensure data files are obtained from a protected environment to avoid reintroducing ransomware to the system. CISA urges you to promptly report ransomware incidents to a local FBI Field Office , FBI\u2019s Internet Crime Compliant Center (IC3) , and CISA via CISA\u2019s 24/7 Operations Center ( report@cisa.gov or 1-844-Say-CISA). Proactive Mitigations to Reduce Risk To reduce opportunities for intrusion and to strengthen response to ransomware activity, CISA recommends customers of vendors and managed service providers (MSPs) implement the following best practices: Maintain a robust asset inventory and hardware list [ CPG 1.A ]. Maintain a clean, offline backup of the system to ensure encryption will not occur once reverted. Conduct a daily system backup on a separate, offline device, such as a flash drive or external hard drive. Remove the device from the computer after backup is complete [ CPG 2.R ]. Do not expose remote services such as Remote Desktop Protocol (RDP) on the web. If these services must be exposed, apply appropriate compensating controls to prevent common forms of abuse and exploitation. Disable unnecessary OS applications and network protocols on internet-facing assets [ CPG 2.W ]. Conduct a risk analysis for RMM software on the network. If RMM is required, ask third-party vendors what security controls are in place. Establish and maintain open communication channels with third-party vendors to stay informed about their patch management process. For software vendors, consider integrating a Software Bill of Materials (SBOM) into products to reduce the amount of time for vulnerability remediation. An SBOM is a formal record of components used to build software. SBOMs enhance supply chain risk management by quickly identifying and avoiding known vulnerabilities, identifying security requirements, and managing mitigations for vulnerabilities. For more information, see CISA\u2019s SBOM page. Resources <",
+      "summary": "Ransomware actors are exploiting unpatched instances of SimpleHelp Remote Monitoring and Management (RMM) to compromise customers of a utility billing software provider.",
+      "tags": [
+        "ransomware",
+        "vulnerability",
+        "RMM",
+        "CVE-2024-57727",
+        "SimpleHelp",
+        "unpatched"
+      ],
+      "cve_ids": [
+        "CVE-2024-57727"
+      ],
+      "threat_category": "ransomware",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:23.206211+00:00",
+      "content_hash": "507b7dce014bdf09f300bb9030256173",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "serverconfig.xml",
+            "serviceconfig.xml",
+            "cisa.gov",
+            "simple-help.com",
+            "bbb.exe",
+            "aaa.exe"
+          ],
+          "hashes": [],
+          "urls": [
+            "https://simple-help.com/allversions"
+          ]
+        },
+        "word_count": 1043
+      }
+    },
+    {
+      "title": "[medium] AVideo: 2FA toggle endpoint has no CSRF protection, letting an attacker page silently disable a logged-in victim's 2FA",
+      "url": "https://github.com/advisories/GHSA-3mv2-vmwh-rwfx",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:34:57Z",
+      "scraped_at": "2026-05-16T09:34:22.111289+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "A vulnerability in the 2FA toggle endpoint of AVideo allows an attacker to silently disable a logged-in victim's 2FA without any CSRF protection.",
+      "tags": [
+        "2FA",
+        "CSRF",
+        "vulnerability",
+        "AVideo"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:24.543387+00:00",
+      "content_hash": "ac43152483081691fc069f988591e48a",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[medium] AVideo: stored XSS via unescaped stream key in modeYoutubeLive.php class attribute",
+      "url": "https://github.com/advisories/GHSA-m5j4-7r85-2cj2",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:33:58Z",
+      "scraped_at": "2026-05-16T09:34:22.111337+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "A stored XSS vulnerability was discovered in the modeYoutubeLive.php class attribute due to an unescaped stream key, allowing attackers to inject malicious code.",
+      "tags": [
+        "XSS",
+        "web vulnerability",
+        "stored XSS"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "HIGH",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:31.812893+00:00",
+      "content_hash": "2b1e7acb72aa341dad3960917a89b466",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "modeYoutubeLive.php"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[high] AVideo: OS command injection in on_publish.php execAsync via unescaped m3u8 URL",
+      "url": "https://github.com/advisories/GHSA-xw67-cg5f-4m2r",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:32:36Z",
+      "scraped_at": "2026-05-16T09:34:22.111378+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "AVideo's on_publish.php is vulnerable to OS command injection via unescaped m3u8 URL, allowing attackers to execute arbitrary system commands.",
+      "tags": [
+        "OS command injection",
+        "PHP",
+        "web-attack",
+        "AVideo"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "HIGH",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:40.323928+00:00",
+      "content_hash": "51bb47eee674050bb5528855c8f46f73",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    }
+  ],
+  "india_alerts": [],
+  "india_scams": [],
+  "threat_actors": [
+    "People's Republic of China (PRC) state-sponsored cyber threat actors",
+    "Cyber Army of Russia Reborn (CARR)",
+    "China-nexus cyber actors"
+  ],
+  "malware_families": [
+    "Flax Typhoon",
+    "Volt Typhoon"
+  ],
+  "iocs": {
+    "ips": [],
+    "domains": [],
+    "hashes": [],
+    "urls": []
+  },
+  "recent_articles": [
+    {
+      "title": "Defending Against China-Nexus Covert Networks of Compromised Devices",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-113a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2026-04-21T15:12:37+00:00",
+      "scraped_at": "2026-05-16T09:34:22.004045+00:00",
+      "article_content": null,
+      "cleaned_content": "Defending against china-nexus covert networks of compromised devices executive summary Defending against China-nexus covert networks of compromised devices Explaining the widespread shift in tactics, techniques and procedures (TTPs) towards networks of compromised infrastructure, and how to defend against it Summary With support from the UK Cyber League , this advisory has been jointly released by the National Cyber Security Centre (NCSC-UK) and international partners: Australian Signals Directorate\u2019s (ASD\u2019s) Australian Cyber Security Centre (ACSC) Communications Security Establishment Canada\u2019s (CSE\u2019s) Canadian Centre for Cyber Security (Cyber Centre) Germany Federal Office for the Protection of the Constitution - Bundesamt f\u00fcr Verfassungsschutz (BfV) Germany Federal Intelligence Service \u2013 Bundesnachrichtendienst (BND) Germany Federal Office for Information Security - Bundesamt f\u00fcr Sicherheit in der Informationstechnik (BSI) Japan National Cybersecurity Office (NCO) - \u56fd\u5bb6\u30b5\u30a4\u30d0\u30fc\u7d71\u62ec\u5ba4 Netherlands General Intelligence and Security Service - Algemene Inlichtingen- en Veiligheidsdienst (AIVD) Netherlands Defence Intelligence and Security Service - Militaire Inlichtingen- en Veiligheidsdienst (MIVD) New Zealand National Cyber Security Centre (NCSC-NZ) Spain National Cryptologic Centre \u2013 Centro Criptol\u00f3gico Nacional (CCN) Sweden National Cyber Security Centre - Nationellt cybers\u00e4kerhetscenter (NCSC-SE) United States Cybersecurity and Infrastructure Security Agency (CISA) United States Department of Defense Cyber Crime Center (DC3) United States Federal Bureau of Investigation (FBI) United States National Security Agency (NSA) Its purpose is to provide network defenders with the tools needed to defend against China-nexus cyber actors and their tactic of using large scale networks of compromised devices (covert networks) to route their cyber activity. Introduction Over the past few years there has been a major shift in the tactics, techniques and procedures (TTPs) used by China-nexus cyber actors, moving away from the use of individually procured infrastructure, and towards the use of externally provisioned, large-scale networks of compromised devices. The NCSC believes that the majority of China-nexus threat actors are using these networks (hereafter \u201ccovert networks\u201d), that multiple covert networks have been created and are being constantly updated, and that a single covert network could be being used by multiple actors. These networks are mainly made up of compromised Small Office Home Office (SOHO) routers, as well as Internet of Things (IoT) and smart devices. Anyone who is a target of China-nexus cyber actors may be impacted by the use of covert networks. They have been used by Chinese state-sponsored actors Volt Typhoon to pre-position offensive cyber capabilities on critical national infrastructure. The group Flax Typhoon used a different covert network of compromised infrastructure to conduct cyber espionage. The use of covert networks of compromised devices - also known as botnets - to facilitate malicious cyber activity is not new, but China-nexus cyber actors are now using them strategically, and at scale. This advisory describes the typical makeup of a covert network and what they are being used for. It also includes protective advice for organizations being targeted by cyber activity using a covert network as an access vector. Covert Networks Covert networks are used to connect across the internet in a low-cost, low-risk, deniable way, disguising the origin and attribution of malicious activity. Actors have been observed using them for each phase of their Cyber Kill Chains, from performing scans as part of reconnaissance, to the delivery of malware, communicating with said malware, and exfiltrating stolen data from a victim. They can also be used for general deniable internet browsing, allowing threat actors to research exploitation techniques, new TTPs, and their victims without attribution. Some covert networks are also used by legitimate customers to browse the internet, making it challenging to attribute malicious activity. There is evidence that covert networks used by China-nexus actors are created and maintained by Chinese information security companies. A network known to network defenders as Raptor Train, which in 2024 infected more than 200,000 devices worldwide, was controlled and managed by the Chinese company, Integrity Technology Group. This company was also assessed by the FBI to be responsible for the computer intrusion activities attributed to China-based hackers known as Flax Typhoon. Botnet operations represent a significant threat to the UK by exploiting vulnerabilities in everyday internet-connected devices with the potential to carry out large-scale cyber attacks \u2013 NCSC Director of Operations, Paul Chichester Covert networks mostly consist of compromised SOHO routers, but they also pull in any vulnerable device they can exploit at scale. Raptor Train was made up of thousands of SOHO routers and IoT devices, such as web cameras and video recorders, as well as firewalls and Network Attached Storage (NAS) devices. The KV Botnet used by Volt Typhoon was mainly made up of vulnerable Cisco and NetGear routers . The edge devices were vulnerable because they were \u201cend of life\u201d \u2013 out of date and no longer receiving updates or security patches by their manufacturers. The cyber security industry has been aware of examples of these networks for some time and has publicly reported on the widespread scale of the threat and its implications. Mandiant Intelligence produced a public blog in May 2024 talking about covert networks in which they highlighted a key issue for defenders \u2013 indicator of compromise (IOC) Extinction. If a particular threat group could now come from one of many covert networks, each with potentially hundreds of thousands of endpoints, and each used by multiple threat actors, old network defense paradigms of static malicious IP block lists will be less effective. This is compounded by the dynamic nature of these networks where new nodes will be added as old devices are patched or removed from use. Typical Network Topology The number of covert networks used by China-nexus cyber actors is large, with new networks regularly developed and deployed. The existing covert networks change too, either because of defensive or legal action, or simply as a result of software updates and new exploits being used to target different technologies for incorporation into the network. Because of this, a description of all known covert networks in detail, including how they are constructed and how they communicate, would immediately be out of date \u2013 and for most network defenders would not be practically useful. However, most covert networks of compromised devices use the same basic set up. Understanding this generalized structure can aid researchers and defenders by helping them to understand which part of a network they may have found, and how to defend against it.",
+      "summary": "China-nexus cyber actors are using large-scale networks of compromised devices (covert networks) to route their cyber activity, posing a significant threat to network defenders.",
+      "tags": [
+        "cyber activity",
+        "compromised devices",
+        "China-nexus",
+        "covert networks"
+      ],
+      "cve_ids": [],
+      "threat_category": "APT",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:34:24.295971+00:00",
+      "content_hash": "4feca54f19bd5f8b97e4b461bb78939c",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1043,
+        "malware_families": [
+          "Volt Typhoon",
+          "Flax Typhoon"
+        ],
+        "threat_actors": [
+          "China-nexus cyber actors",
+          "Volt Typhoon",
+          "Flax Typhoon"
+        ]
+      }
+    },
+    {
+      "title": "Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-097a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2026-04-06T11:03:58+00:00",
+      "scraped_at": "2026-05-16T09:34:22.011409+00:00",
+      "article_content": null,
+      "cleaned_content": "Advisory at a Glance Title Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure Original Publication April 7, 2026 Executive Summary Iran-affiliated advanced persistent threat (APT) actors are conducting exploitation activity targeting internet-facing operational technology (OT) devices, including programmable logic controllers (PLCs) manufactured by Rockwell Automation/Allen-Bradley. This activity has led to PLC disruptions across several U.S. critical infrastructure sectors through malicious interactions with the project file and manipulation of data on human machine interface (HMI) and supervisory control and data acquisition (SCADA) displays, resulting in operational disruption and financial loss. U.S. organizations should urgently review the tactics, techniques, and procedures (TTPs) and indicators of compromise (IOCs) in this advisory for indications of current or historical activity on their networks, and apply the recommendations listed in the Mitigations section of this advisory to reduce the risk of compromise. Affected Products Rockwell Automation/Allen-Bradley manufactured PLCs Potentially other branded PLCs Key Actions Remove PLCs from direct internet exposure via secure gateway and firewall. Query available logs for the provided IOCs in the corresponding time frames. Check available logs for suspicious traffic on the ports associated with OT devices, including 44818 , 2222 , 102 , and 502 , especially traffic originating from overseas hosting providers. For Rockwell Automation devices, place the physical mode switch on the controller into run position. Contact the authoring agencies and Rockwell Automation for guidance if you believe your organization was targeted. Indicators of Compromise For a downloadable copy of IOCs, see: AA26-097A STIX XML (35KB) AA26-097A STIX JSON (12 KB) Intended Audience Organizations: Critical Infrastructure Sectors: Government Services and Facilities , Water and Wastewater Systems (WWS), and Energy Roles: Defensive cybersecurity analysts , OT cybersecurity engineers , cybersecurity architects , secure systems developer Introduction The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), National Security Agency (NSA), Environmental Protection Agency (EPA), Department of Energy (DOE), and United States Cyber Command \u2013 Cyber National Mission Force (CNMF), hereafter referred to as the \u201cauthoring agencies,\u201d are urgently warning U.S. organizations of ongoing cyber exploitation of internet-connected operational technology (OT) devices, including Rockwell Automation/Allen-Bradley-manufactured programmable logic controllers (PLCs), across multiple U.S. critical infrastructure sectors. As a result of this activity, organizations from multiple U.S. critical infrastructure sectors experienced disruptions through malicious interactions with the project files 1 and the manipulation of data displayed on human machine interface (HMI) and supervisory control and data acquisition (SCADA) displays. In a few cases, this activity has resulted in operational disruption and financial loss. Due to the widespread use of these PLCs and the potential for additional targeting of other branded OT devices across critical infrastructure, the authoring agencies recommend U.S. organizations urgently review the tactics, techniques, and procedures (TTPs) and indicators of compromise (IOCs) in this advisory for indications of current or historical activity on their networks, and apply the recommendations listed in the Mitigations section to reduce the risk of compromise. The authoring agencies assess a group of Iranian-affiliated advanced persistent threat (APT) actors is conducting this activity to cause disruptive effects within the United States. The group has targeted devices spanning multiple U.S. critical infrastructure sectors, including Government Services and Facilities (to include local municipalities), Water and Wastewater Systems (WWS), and Energy Sectors. The authoring agencies previously reported on similar activity targeting PLCs by CyberAv3ngers (aka Shahid Kaveh Group)\u2014a cyber threat actor affiliated with Iran\u2019s Islamic Revolutionary Guard Corps (IRGC) Cyber Electronic Command (CEC). If owners and operators discover an affected internet-accessible device in their environment, additional technical measures may be necessary to evaluate the risk of compromise. Please contact the authoring agencies and applicable vendors through existing support channels available to customers and integrators (see Contact Information ) to receive support, mitigation, and investigation assistance, and engage your cyber incident response plans. In addition to contacting the authoring agencies, organizations with Rockwell Automation/Allen-Bradley-manufactured PLCs should review the manufacturer\u2019s previously issued guidance to strengthen the security of their operational technology deployments: PN1550 | CVE-2021-22681: Authentication Bypass Vulnerability Found in Logix Controllers , published in 2021, and SD1771 | Rockwell Automation Reiterates Customer Guidance to Disconnect Devices from the Internet and Harden PLCs to Protect from Cyber Threats , published in 2026. Contact the Rockwell Automation Product Security Incident Response Team (PSIRT) at PSIRT@rockwellautomation.com for questions regarding this guidance, or to report cyber incidents related to Rockwell Automation products. For more information on Iranian malicious cyber activity, see CISA\u2019s Iran Threat Overview and Advisories webpage and the FBI\u2019s Iran Threat webpage. Download the PDF version of this report: Iranian-Affiliated Cyber Actors Exploit Programmable Logic Controllers Across US Critical Infrastructure (PDF, 816.90 KB ) For a downloadable copy of IOCs, see:",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [
+        "CVE-2021-22681"
+      ],
+      "threat_category": null,
+      "severity": null,
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "ee83d389cf735f07db57986e23519dc7",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "rockwellautomation.com"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 772
+      }
+    },
+    {
+      "title": "Pro-Russia Hacktivists Conduct Opportunistic Attacks Against US and Global Critical Infrastructure",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-343a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-12-05T19:35:38+00:00",
+      "scraped_at": "2026-05-16T09:34:22.022244+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary Note: This joint Cybersecurity Advisory is being published as an addition to the Cybersecurity and Infrastructure Security Agency (CISA) May 6, 2025, joint fact sheet Primary Mitigations to Reduce Cyber Threats to Operational Technology and European Cybercrime Centre\u2019s (EC3) Operation Eastwood , in which CISA, Federal Bureau of Investigation (FBI), Department of Energy (DOE), Environmental Protection Agency (EPA), and EC3 shared information about cyber incidents affecting the operational technology (OT) and industrial control systems (ICS) of critical infrastructure entities in the United States and globally. FBI, CISA, National Security Agency (NSA), and the following partners\u2014hereafter referred to as \u201cthe authoring organizations\u201d\u2014are releasing this joint advisory on the targeting of critical infrastructure by pro-Russia hacktivists: U.S. Department of Energy (DOE) U.S. Environmental Protection Agency (EPA) U.S. Department of Defense Cyber Crime Center (DC3) Europol European Cybercrime Centre (EC3) EUROJUST \u2013 European Union Agency for Criminal Justice Cooperation Australian Signals Directorate\u2019s Australian Cyber Security Centre (ASD\u2019s ACSC) Canadian Centre for Cyber Security (Cyber Centre) Canadian Security Intelligence Service (CSIS) Czech Republic Military Intelligence (VZ) Czech Republic National Cyber and Information Security Agency (N\u00daKIB) Czech Republic National Centre Against Terrorism, Extremism, and Cyber Crime (NCTEKK) French National Cybercrime Unit \u2013 Gendarmerie Nationale (UNC) French National Jurisdiction for the Fight Against Organized Crime (JUNALCO) German Federal Office for Information Security (BSI) Italian State Police (PS) Latvian State Police (VP) Lithuanian Criminal Police Bureau (LKPB) New Zealand National Cyber Security Centre (NCSC-NZ) Romanian National Police (PR) Spanish Civil Guard (GC) Spanish National Police (CNP) Swedish Polisen (SC3) United Kingdom National Cyber Security Centre (NCSC-UK) The authoring organizations assess pro-Russia hacktivist groups are conducting less sophisticated, lower-impact attacks against critical infrastructure entities, compared to advanced persistent threat (APT) groups. These attacks use minimally secured, internet-facing virtual network computing (VNC) connections to infiltrate (or gain access to) OT control devices within critical infrastructure systems. Pro-Russia hacktivist groups\u2014Cyber Army of Russia Reborn (CARR), Z-Pentest, NoName057(16), Sector16, and affiliated groups\u2014are capitalizing on the widespread prevalence of accessible VNC devices to execute attacks against critical infrastructure entities, resulting in varying degrees of impact, including physical damage. Targeted sectors include Water and Wastewater Systems , Food and Agriculture , and Energy . The authoring organizations encourage critical infrastructure organizations to implement the recommendations in the Mitigations section of this advisory to reduce the likelihood and impact of pro-Russia hacktivist-related incidents. For additional information on Russian state-sponsored malicious cyber activity, see CISA\u2019s Russia Threat Overview and Advisories webpage. Download the PDF version of this report: Pro-Russia Hacktivists Conduct Opportunistic Attacks Against US and Global Critical Infrastructure (PDF, 1.53 MB ) Background and Development of Pro-Russia Hacktivist Groups Over the past several years, the authoring organizations have observed pro-Russia hacktivist groups conducting cyber operations against numerous organizations and critical infrastructure sectors worldwide. The escalation of the Russia-Ukraine conflict in 2022 significantly increased the number of these pro-Russia groups. Consisting of individuals who support Russia\u2019s agenda but lack direct governmental ties, most of these groups target Ukrainian and allied infrastructure. However, among the increasing number of groups, some appear to have associations with the Russian state through direct or indirect support. Cyber Army of Russia Reborn The authoring organizations assess that the Russian General Staff Main Intelligence Directorate (GRU) Main Center for Special Technologies (GTsST) military unit 74455\u2014tracked in the cybersecurity community under several names (see Appendix B: Additional Designators Used for Cited Groups )\u2014is likely responsible for supporting the creation of CARR \u2014also known as \u201cThe People\u2019s Cyber Army of Russia\u201d\u2014in late February or early March of 2022. Actors suspected to be from GRU unit 74455 likely funded the tools CARR threat actors used to conduct distributed denial-of-service (DDoS) attacks through at least September 2024. In April 2022, the group began using a new Telegram channel featuring the name \u201cCyberArmyofRussia_Reborn\u201d to organize and plan group actions. The channel creators recruited actors to use CARR as an unattributable platform for conducting cyber activities beneath the level of an APT, aimed at deterring anti-Russia rhetoric. CARR threat actors presented themselves as a group of pro-Russia hacktivists supporting Russia\u2019s stance on the Ukrainian conflict, and they soon began claiming responsibility for DDoS attacks against the U.S. and Europe for supporting Ukraine. CARR documented these actions through embellished images and videos shared on their social media channels, promoting Russian ideology, disseminating talking points, and publicizing leaked information from hacks attributed to Russian state threat actors. In late 2023, CARR expanded their operations to include attacks on industrial control systems (ICS), claiming an intrusion against a European wastewater treatment facility in October 2023. In November 2023, CARR targeted human-machine interface (HMI) devices, claiming intrusions at two U.S. dairy farms. The authoring organizations assess that by late September 2024, CARR channel administrators became dissatisfied with the level of support and funding provided by the GRU. This dissatisfaction led CARR administrators and an administrator from another hacktivist group, NoName057(16), to create the Z-Pentest group, employing the same tactics, techniques, and procedures (TTPs) as CARR but separate from GRU involvement. NoName057(16) The authoring organizations assess that the Center for the Study and Network Monitoring of the Youth Environment (CISM), established on behalf of the Kremlin, created NoName057(16) as a covert project within the organization. Senior executives and employees within CISM developed and customized the NoName057(16) proprietary DDoS tool DDoSia , paid for the group\u2019s network infrastructure, served as administrators on NoName057(16) Telegram channels, and selected DDoS targets. Active since March 2022, NoName057(16) has conducted frequent DDoS attacks against government and private sector entities in North Atlantic Treaty Organization (NATO) member states and other European countries perceived as hostile to Russian geopolitical interests. The group operates primarily through Telegram channels and used GitHub, alongside various websites and repositories, to host DDoSia and share materials and TTPs with their followers. In 2024, NoName057(16) began collaborating closely with other pro-Russia hacktivist groups, operating a joint chat with CARR by mid-2024. In July 2024, NoName057(16) jointly claimed responsibility with CARR for an alleged intrusion against OT assets in the U.S. The high degree of cooperation with CARR likely contributed to the formation of Z-Pentest, which is composed of actors and administrators from both teams, in September 2024. Z-Pentest Established in September 2024, Z-Pentest is composed of members from CARR and NoName057(16). The group specializes in OT intrusion operations targeting globally dispersed critical infrastructure entities. Additionally, the group uses \u201chack and leak\u201d operations and defacement attacks to draw attention to their pro-Russia messaging. Unlike other pro-Russia hacktivist groups, Z-Pentest largely avoids DDoS activiti",
+      "summary": "Pro-Russia hacktivists are conducting opportunistic attacks against US and global critical infrastructure, using minimally secured VNC connections to infiltrate OT control devices.",
+      "tags": [
+        "hacktivism",
+        "critical-infrastructure",
+        "pro-russia",
+        "ot-control-devices",
+        "vnc"
+      ],
+      "cve_ids": [],
+      "threat_category": "APT",
+      "severity": "MEDIUM",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:20.787225+00:00",
+      "content_hash": "e07de81559deed13acda75d3f87432cd",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1078,
+        "threat_actors": [
+          "Cyber Army of Russia Reborn (CARR)",
+          "Z-Pentest",
+          "NoName057(16)",
+          "Sector16"
+        ]
+      }
+    },
+    {
+      "title": "CISA Shares Lessons Learned from an Incident Response Engagement",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-266a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-09-22T15:12:49+00:00",
+      "scraped_at": "2026-05-16T09:34:22.034491+00:00",
+      "article_content": null,
+      "cleaned_content": "Advisory at a Glance Executive Summary CISA began incident response efforts at a U.S. federal civilian executive branch (FCEB) agency following the detection of potential malicious activity identified through security alerts generated by the agency\u2019s endpoint detection and response (EDR) tool. CISA identified three lessons learned from the engagement that illuminate how to effectively mitigate risk, prepare for, and respond to incidents: vulnerabilities were not promptly remediated, the agency did not test or exercise their incident response plan (IRP), and EDR alerts were not continuously reviewed. Key Actions Prevent compromise by prioritizing the patching of critical vulnerabilities in public-facing systems and known exploited vulnerabilities. Prepare for incidents by maintaining, practicing, and updating incident response plans. Prepare for incidents by implementing comprehensive and verbose logging and aggregate logs in a centralized out-of-band location. Indicators of Compromise For a downloadable copy of indicators of compromise, see: AA25-266A-JSON.stix_.json AA25-266A-STIX.stix_.xml Intended Audience Organizations: FCEB agencies and critical infrastructure organizations. Roles: Defensive Cybersecurity Analysts , Vulnerability Analysts , Security Systems Managers , Systems Security Analysts , and Cybersecurity Policy and Planning Professionals . Download the PDF version of this report AA25-266A advisory cisa shares lessons learned from ir engagement Introduction The Cybersecurity and Infrastructure Security Agency (CISA) is releasing this Cybersecurity Advisory to highlight lessons learned from an incident response engagement CISA conducted at a U.S. federal civilian executive branch (FCEB) agency. CISA is publicizing this advisory to reinforce the importance of prompt patching, as well as preparing for incidents by practicing incident response plans and by implementing logging and aggregating logs in a centralized out-of-band location. CISA is also raising awareness about the tactics, techniques, and procedures (TTPs) employed by these cyber threat actors to help organizations safeguard against similar exploits. CISA began incident response efforts at an FCEB agency after the agency identified potential malicious activity through security alerts generated by the agency\u2019s endpoint detection and response (EDR) tool. CISA discovered cyber threat actors compromised the agency by exploiting CVE-2024-36401 in a GeoServer about three weeks prior to the EDR alerts. Over the three-week period, the cyber threat actors gained separate initial access to a second GeoServer via the same vulnerability and moved laterally to two other servers. Leveraging insights CISA gleaned from the organization\u2019s security posture and response, CISA is sharing lessons learned for organizations to mitigate similar compromises (see Lessons Learned for more details): Vulnerabilities were not promptly remediated. The cyber threat actors exploited CVE-2024-36401 for initial access on two GeoServers. The vulnerability was disclosed 11 days prior to the cyber threat actors accessing the first GeoServer and 25 days prior to them accessing the second GeoServer. The agency did not test or exercise their incident response plan (IRP), nor did their IRP enable them to promptly engage third parties and grant third parties access to necessary resources. This delayed certain elements of CISA\u2019s response as the IRP did not have procedures for involving third-party assistance or for granting third-party access to their security tools. EDR alerts were not continuously reviewed, and some public-facing systems lacked endpoint protection. The activity remained undetected for three weeks; the agency missed an opportunity to detect this activity earlier as they did not observe an alert from a GeoServer and the Web Server did not have endpoint protection. These lessons highlight strategies to effectively mitigate risk, enhance preparedness, and respond to incidents with greater efficiency. CISA encourages all organizations to consider the lessons learned and apply the associated recommendations in the Mitigations section of this advisory to improve their security posture. This advisory also provides the cyber threat actors\u2019 TTPs and indicators of compromise (IOCs). For a downloadable copy of IOCs, see: AA25-266A-JSON.stix_.json AA25-266A-STIX.stix_.xml Technical Details Note: This advisory uses the MITRE ATT&CK \u00ae Matrix for Enterprise framework, version 17. See the MITRE ATT&CK Tactics and Techniques section of this advisory for a table of the threat actors\u2019 activity mapped to MITRE ATT&CK tactics and techniques. Threat Actor Activity CISA responded to a suspected compromise of a large FCEB agency after the agency\u2019s security operations center (SOC) observed multiple endpoint security alerts. During the incident response, CISA discovered that cyber threat actors gained access to the agency\u2019s network on July 11, 2024, by exploiting GeoServer vulnerability CVE 2024-36401 [ CWE-95: \u201cEval Injection\u201d ] on a public-facing GeoServer (GeoServer 1). This critical vulnerability, disclosed June 30, 2024, allows unauthenticated users to gain remote code execution (RCE) on affected GeoServer versions [1] . The cyber threat actors used this vulnerability to download open source tools and scripts and establish persistence in the agency\u2019s network. (CISA added this vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog on July 15, 2024.) After gaining initial access to GeoServer 1, the cyber threat actors gained separate initial access to a second GeoServer (GeoServer 2) on July 24, 2024, by exploiting the same vulnerability. They moved laterally from GeoServer 1 to a web server (Web Server) and then a Structured Query Language (SQL) server. On each server, they uploaded (or attempted to upload) web shells such as China Chopper , along with scripts designed for remote access, persistence, command execution, and privilege escalation. The cyber threat actors also used living off the land (LOTL) techniques. See Figure 1 for an overview of the cyber threat actors\u2019 activity and the following sections for detailed threat actors TTPs. Figure 1. Overview of Threat Actor Activity",
+      "summary": "CISA shares lessons learned from an incident response engagement, highlighting the importance of prompt patching, practicing incident response plans, and implementing logging and aggregating logs in a centralized out-of-band location.",
+      "tags": [
+        "incident-response",
+        "patching",
+        "logging",
+        "supply-chain-attack"
+      ],
+      "cve_ids": [
+        "CVE-2024-36401",
+        "CVE-2016-5195"
+      ],
+      "threat_category": "supply-chain",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:28.462134+00:00",
+      "content_hash": "8c07b5dc8ebfb2a2515fdf1811c4bc53",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 891
+      }
+    },
+    {
+      "title": "Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-08-25T13:36:40+00:00",
+      "scraped_at": "2026-05-16T09:34:22.042708+00:00",
+      "article_content": null,
+      "cleaned_content": "Executive summary People\u2019s Republic of China (PRC) state-sponsored cyber threat actors are targeting networks globally, including, but not limited to, telecommunications, government, transportation, lodging, and military infrastructure networks. While these actors focus on large backbone routers of major telecommunications providers, as well as provider edge (PE) and customer edge (CE) routers, they also leverage compromised devices and trusted connections to pivot into other networks. These actors often modify routers to maintain persistent, long-term access to networks. This activity partially overlaps with cyber threat actor reporting by the cybersecurity industry\u2014commonly referred to as Salt Typhoon, OPERATOR PANDA, RedMike, UNC5807, and GhostEmperor, among others. The authoring agencies are not adopting a particular commercial naming convention and hereafter refer to those responsible for the cyber threat activity more generically as \u201cAdvanced Persistent Threat (APT) actors\u201d throughout this advisory. This cluster of cyber threat activity has been observed in the United States, Australia, Canada, New Zealand, the United Kingdom, and other areas globally. This Cybersecurity Advisory (CSA) includes observations from various government and industry investigations where the APT actors targeted internal enterprise environments, as well as systems and networks that deliver services directly to customers. This CSA details the tactics, techniques, and procedures (TTPs) leveraged by these APT actors to facilitate detection and threat hunting, and provides mitigation guidance to reduce the risk from these APT actors and their TTPs. This CSA is being released by the following authoring and co-sealing agencies: United States National Security Agency (NSA) United States Cybersecurity and Infrastructure Security Agency (CISA) United States Federal Bureau of Investigation (FBI) United States Department of Defense Cyber Crime Center (DC3) Australian Signals Directorate\u2019s Australian Cyber Security Centre (ASD\u2019s ACSC) Canadian Centre for Cyber Security (Cyber Centre) Canadian Security Intelligence Service (CSIS) New Zealand National Cyber Security Centre (NCSC-NZ) United Kingdom National Cyber Security Centre (NCSC-UK) Czech Republic National Cyber and Information Security Agency (N\u00daKIB) - N\u00e1rodn\u00ed \u00fa\u0159ad pro kybernetickou a informa\u010dn\u00ed bezpe\u010dnost Finnish Security and Intelligence Service (SUPO) - Suojelupoliisi Germany Federal Intelligence Service (BND) - Bundesnachrichtendienst Germany Federal Office for the Protection of the Constitution (BfV) - Bundesamt f\u00fcr Verfassungsschutz Germany Federal Office for Information Security (BSI) - Bundesamt f\u00fcr Sicherheit in der Informationstechnik Italian External Intelligence and Security Agency (AISE) - Agenzia Informazioni e Sicurezza Esterna Italian Internal Intelligence and Security Agency (AISI) - Agenzia Informazioni e Sicurezza Interna Japan National Cybersecurity Office (NCO) - \u56fd\u5bb6\u30b5\u30a4\u30d0\u30fc\u7d71\u62ec\u5ba4 Japan National Police Agency (NPA) - \u8b66\u5bdf\u5e81 Netherlands Defence Intelligence and Security Service (MIVD) - Militaire Inlichtingen- en Veiligheidsdienst Netherlands General Intelligence and Security Service (AIVD) - Algemene Inlichtingen- en Veiligheidsdienst Polish Military Counterintelligence Service (SKW) - S\u0142u\u017cba Kontrwywiadu Wojskowego Polish Foreign Intelligence Agency (AW) - Agencja Wywiadu Spain National Intelligence Centre (CNI) - Centro Nacional de Inteligencia The authoring agencies strongly urge network defenders to hunt for malicious activity and to apply the mitigations in this CSA to reduce the threat of Chinese state-sponsored and other malicious cyber activity. Any mitigation or eviction measures listed within are subject to change as new information becomes available and ongoing coordinated operations dictate. Network defenders should ensure any actions taken in response to the CSA are compliant with local laws and regulations within the jurisdictions within which they operate. Background The APT actors have been performing malicious operations globally since at least 2021. These operations have been linked to multiple China-based entities, including at least Sichuan Juxinhe Network Technology Co. Ltd. (\u56db\u5ddd\u805a\u4fe1\u548c\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8), Beijing Huanyu Tianqiong Information Technology Co., Ltd. (\u5317\u4eac\u5bf0\u5b87\u5929\u7a79\u4fe1\u606f\u6280\u672f\u6709\u9650\u516c\u53f8), and Sichuan Zhixin Ruijie Network Technology Co., Ltd. (\u56db\u5ddd\u667a\u4fe1\u9510\u6377\u7f51\u7edc\u79d1\u6280\u6709\u9650\u516c\u53f8). These companies provide cyber-related products and services to China\u2019s intelligence services, including multiple units in the People\u2019s Liberation Army and Ministry of State Security. The data stolen through this activity against foreign telecommunications and Internet service providers (ISPs), as well as intrusions in the lodging and transportation sectors, ultimately can provide Chinese intelligence services with the capability to identify and track their targets\u2019 communications and movements around the world. For more information on PRC state-sponsored malicious cyber activity, see CISA\u2019s People's Republic of China Cyber Threat Overview and Advisories webpage. Download the PDF version of this report: CSA COUNTERING CHINA STATE ACTORS COMPROMISE OF NETWORKS (PDF, 1.09 MB ) For a downloadable list of IOCs, visit: AA25-239A Countering Chinese State-Sponsored Actors Compromise of Networks to Feed Global Espionage System (JSON, 86.01 KB ) AA25-239A Countering Chinese State-Sponsored Actors Compromise of Networks to Feed Global Espionage System (XML, 66.50 KB ) Cybersecurity Industry Tracking The cybersecurity industry provides overlapping cyber threat intelligence, indicators of compromise (IOCs), and mitigation recommendations related to this Chinese state-sponsored cyber activity. While not all encompassing, the following are the most notable threat group names related to this activity and commonly used within the cybersecurity community: Salt Typhoon, OPERATOR PANDA, RedMike, UNC5807, and GhostEmperor. Note : Cybersecurity companies have different methods of tracking and attributing cyber actors, and this may not be a 1:1 correlation to the authoring agencies\u2019 understanding for all activity related to these groupings. Technical details The following sections are a compilation of TTPs the APT actors have used since at least 2021 to target enterprise environments. Particularly notable TTPs include modifying router configurations for lateral movement pivoting between networks and using virtualized containers on network devices to evade detection. The actors continue to use many of the TTPs listed, but expect them to evolve when existing TTPs no longer achieve their goals. Even if no longer used regularly, the actors may still use previous TTPs opportunistically in favorable conditions. The TTP descriptions can also be useful to network defenders for retroactive threat hunting. Note : This advisory uses the MITRE ATT&CK\u00ae for Enterprise framework, version 17 and MITRE ATT&CK for ICS framework, version 17 . See the Appendix A: MITRE ATT&CK Tactics and Techniques section of this advisory for a table of the APT actors\u2019 activity mapped to MITRE ATT&CK tactics and techniques. Initial access Investigations associated with these APT actors indicate that they are having considerable success exploiting publicly known common vulnerabilities and exposures (CVEs) and other avoidable weaknesses within compromised infrastructure [ T1190 ]. Exploitation of zero-day vulnerabilities has not been observed to date. The APT actors will likely continue to adapt their tactics as new vulnerabilities are discovered and as targets implement mitigations, and will likely expand their use of existing vulnerabilities. The following list is not exhaustive and the authoring agencies suspect that the APT actors may target other de",
+      "summary": "Chinese state-sponsored cyber threat actors are targeting networks globally, compromising large backbone routers and leveraging compromised devices and trusted connections to pivot into other networks.",
+      "tags": [
+        "cyber-espionage",
+        "APT",
+        "Chinese-state-sponsored"
+      ],
+      "cve_ids": [
+        "CVE-2023-20198",
+        "CVE-2018-0171",
+        "CVE-2024-21887",
+        "CVE-2023-46805",
+        "CVE-2024-3400",
+        "CVE-2023-20273"
+      ],
+      "threat_category": "APT",
+      "severity": "CRITICAL",
+      "is_india_related": true,
+      "india_keywords": [
+        "UPI"
+      ],
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:36.353178+00:00",
+      "content_hash": "b518601a1e3010fcfa22db363dca4221",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1064,
+        "threat_actors": [
+          "People's Republic of China (PRC) state-sponsored cyber threat actors"
+        ]
+      }
+    },
+    {
+      "title": "CISA and USCG Identify Areas for Cyber Hygiene Improvement After Conducting Proactive Threat Hunt at US Critical Infrastructure Organization",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-212a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-07-29T17:53:52+00:00",
+      "scraped_at": "2026-05-16T09:34:22.054912+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary The Cybersecurity and Infrastructure Security Agency (CISA) and U.S. Coast Guard (USCG) are issuing this Cybersecurity Advisory to present findings from a recent CISA and USCG hunt engagement. The purpose of this advisory is to highlight identified cybersecurity issues, thereby informing security defenders in other organizations of potential similar issues and encouraging them to take proactive measures to enhance their cybersecurity posture. This advisory has been coordinated with the organization involved in the hunt engagement. CISA led a proactive hunt engagement at a U.S. critical infrastructure organization with the support of USCG analysts. During hunts, CISA proactively searches for evidence of malicious activity or malicious cyber actor presence on customer networks. The organization invited CISA to conduct a proactive hunt to determine if an actor had been present in the organization\u2019s environment. ( Note: Henceforth, unless otherwise defined, \u201cCISA\u201d is used in this advisory to refer to the hunt team as an umbrella for both CISA and USCG analysts). During this engagement, CISA did not identify evidence of malicious cyber activity or actor presence on the organization\u2019s network, but did identify cybersecurity risks, including: Insufficient logging; Insecurely stored credentials; Shared local administrator (admin) credentials across many workstations; Unrestricted remote access for local admin accounts; Insufficient network segmentation configuration between IT and operational technology (OT) assets; and Several device misconfigurations. In coordination with the organization where the hunt was conducted, CISA and USCG are sharing cybersecurity risk findings and associated mitigations to assist other critical infrastructure organizations with improving their cybersecurity posture. Recommendations are listed for each of CISA\u2019s findings, as well as general practices to strengthen cybersecurity for OT environments. These mitigations align with CISA and the National Institute for Standards and Technology\u2019s (NIST) Cross-Sector Cybersecurity Performance Goals (CPGs) , and with mitigations provided in the USCG Cyber Command\u2019s (CGCYBER) 2024 Cyber Trends and Insights in the Marine Environment (CTIME) Report . Although no malicious activity was identified during this engagement, critical infrastructure organizations are advised to review and implement the mitigations listed in this advisory to prevent potential compromises and better protect our national infrastructure. These mitigations include the following (listed in order of importance): Do not store passwords or credentials in plaintext. Instead, use secure password and credential management solutions such as encrypted password vaults, managed service accounts, or built-in secure features of deployment tools. Ensure that all credentials are encrypted both at rest and in transit. Implement strict access controls and regular audits to securely manage scripts or tools accessing credentials. Use code reviews and automated scanning tools to detect and eliminate any instances of plaintext credentials on hosts or workstations. Enforce the principle of least privilege , only granting users and processes the access necessary to perform their functions. Avoid sharing local administrator account credentials. Instead, provision unique, complex passwords for each account using tools like Microsoft\u2019s Local Administrator Password Solution (LAPS) that automate password management and rotation. Enforce multifactor authentication (MFA) for all administrative access , including local and domain accounts, and for remote access methods such as Remote Desktop Protocol (RDP) and virtual private network (VPN) connections. Implement and enforce strict policies to only use hardened bastion hosts isolated from IT networks equipped with phishing-resistant MFA to access industrial control systems (ICS)/OT networks , and ensure regular workstations (i.e., workstations used for accessing IT networks and applications) cannot be used to access ICS/OT networks. Implement comprehensive (i.e., large coverage) and detailed logging across all systems , including workstations, servers, network devices, and security appliances. Ensure logs capture information such as authentication attempts, command-line executions with arguments, and network connections . Retain logs for an appropriate period to enable thorough historical analysis (adhering to organizational policies and compliance requirements) and aggregate logs in an out-of-band, centralized location , such as a security information event management (SIEM) tool, to protect them from tampering and facilitate efficient analysis. For more detailed mitigations addressing the identified cybersecurity risks, see the Mitigations section of this advisory. Download the PDF version of this report: AA25-212A CISA and USCG Identify Areas for Cyber Hygiene Improvement (PDF, 537.67 KB ) Technical Details Note: This advisory uses the MITRE ATT&CK \u00ae Matrix for Enterprise framework, version 17. See Appendix: MITRE ATT&CK Tactics and Techniques for a table of potential activity mapped to MITRE ATT&CK tactics and techniques. Overview Cybersecurity and Infrastructure Security Agency (CISA) and United States Coast Guard (USCG) analysts (collectively referred to as CISA in this report) conducted a threat hunt engagement at a critical infrastructure organization. During this hunt, CISA proactively searched for evidence of malicious activity or the presence of a malicious cyber actor on the customer\u2019s network using host, network, industrial control system (ICS), and commercial cloud and open-source analysis tools. CISA searched for evidence of activity by looking for specific exploitation tactics, techniques, and procedures (TTPs) and associated artifacts. While CISA did not find evidence of threat actor presence on the organization\u2019s network, the team did identify several cybersecurity risks. These findings are listed below in order of risk. Technical details of each identified cyber risk are included, along with the potential impact from threat actor exploitation of each risk (recommendations for mitigating each risk are listed in the Mitigations section below). Several of these findings align with those observed during similar engagements conducted by US Coast Guard Cyber Command (CGCYBER), which are documented in their 2024 Cyber Trends and Insights in the Marine Environment (CTIME) report. The authoring agencies encourage critical infrastructure organizations to review the CTIME report to understand trends in the techniques/attack paths threat actors are using to compromise at-risk organizations, and what mitigations organizations should implement to prevent a successful attack. Key Findings Shared Local Admin Accounts with Non-Unique Passwords Stored as Plaintext Details: CISA identified a few local admin accounts with non-unique passwords; these accounts were shared across many hosts. The credentials for each account were stored plaintext in batch scripts. CISA discovered these authorized scripts were configured to create user accounts with local admin privileges and then set identical, non-expiring passwords\u2014these passwords were stored in plaintext in the script. One script was configured to create an admin account (set with a password stored in the script in plaintext) and automatically add to the admin group. The account was set as the local admin account on many other hosts. Potential Impact: The storage of local admin credentials in plaintext scripts across numerous hosts increases the risk of widespread unauthorized access, and the usage of non-unique passwords facilitates lateral movement throughout the network. Malicious actors with access to workstations with either of these batch scripts could obtain the passwords for these local admin accounts by searching the filesystem for strings like net user /add , identifying scripts containing usernames and passwords [",
+      "summary": "CISA and USCG identified cybersecurity risks in a US critical infrastructure organization, including insufficient logging, insecurely stored credentials, and device misconfigurations.",
+      "tags": [
+        "device-misconfigurations",
+        "insufficient-logging",
+        "critical-infrastructure",
+        "cybersecurity",
+        "credential-theft"
+      ],
+      "cve_ids": [],
+      "threat_category": "credential-theft",
+      "severity": "MEDIUM",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:35:43.662803+00:00",
+      "content_hash": "a148aa3b7f736ce2a4fd01391d39a648",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 1120
+      }
+    },
+    {
+      "title": "#StopRansomware: Interlock",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-203a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-07-21T14:11:24+00:00",
+      "scraped_at": "2026-05-16T09:34:22.065665+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary Note : This joint Cybersecurity Advisory is part of an ongoing #StopRansomware effort to publish advisories for network defenders that detail various ransomware variants and ransomware threat actors. These #StopRansomware advisories include recently and historically observed tactics, techniques, and procedures (TTPs) and indicators of compromise (IOCs) to help organizations protect against ransomware. Visit stopransomware.gov to see all #StopRansomware advisories and to learn more about other ransomware threats and no-cost resources. The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), Department of Health and Human Services (HHS), and Multi-State Information Sharing and Analysis Center (MS-ISAC)\u2014hereafter referred to as \u201cthe authoring organizations\u201d\u2014are releasing this joint advisory to disseminate known Interlock ransomware IOCs and TTPs identified through FBI investigations (as recently as June 2025) and trusted third-party reporting. The Interlock ransomware variant was first observed in late September 2024, targeting various business, critical infrastructure, and other organizations in North America and Europe. FBI maintains these actors target their victims based on opportunity, and their activity is financially motivated. FBI is aware of Interlock ransomware encryptors designed for both Windows and Linux operating systems; these encryptors have been observed encrypting virtual machines (VMs) across both operating systems. FBI observed actors obtaining initial access via drive-by download from compromised legitimate websites, which is an uncommon method among ransomware groups. Actors were also observed using the ClickFix social engineering technique for initial access, in which victims are tricked into executing a malicious payload under the guise of fixing an issue on the victim\u2019s system. Actors then use various methods for discovery, credential access, and lateral movement to spread to other systems on the network. Interlock actors employ a double extortion model in which actors encrypt systems after exfiltrating data, which increases pressure on victims to pay the ransom to both get their data decrypted and prevent it from being leaked. FBI, CISA, HHS, and MS-ISAC encourage organizations to implement the recommendations in the Mitigations section of this advisory to reduce the likelihood and impact of Interlock ransomware incidents. Download the PDF version of this report: AA25 203A StopRansomware Interlock (PDF, 727.00 KB ) For a downloadable copy of IOCs, see: AA25-203A Interlock STIX XML (XML, 63.69 KB ) AA25 203A Interlock STIX JSON (JSON, 57.47 KB ) Technical Details Note : This advisory uses the MITRE ATT&CK\u00ae Matrix for Enterprise framework, version 17. See the MITRE ATT&CK Tactics and Techniques section of this advisory for tables mapped to the threat actors\u2019 activity. Overview Since September 2024, Interlock ransomware actors have impacted a wide range of businesses and critical infrastructure sectors in North America and Europe. These actors are opportunistic and financially motivated in nature and employ tactics to infiltrate and disrupt the victim\u2019s ability to provide their essential services. Interlock actors leverage a double extortion model, in which they both encrypt and exfiltrate victim data. Ransom notes do not include an initial ransom demand or payment instructions; instead, victims are provided with a unique code and are instructed to contact the ransomware group via a .onion URL through the Tor browser. To date, Interlock actors have been observed encrypting VMs, leaving hosts, workstations, and physical servers unaffected; however, this does not mean they will not expand to these systems in the future. To counter Interlock actors\u2019 threat to VMs, enterprise defenders should implement robust endpoint detection and response (EDR) tooling and capabilities. The authoring agencies are aware of emerging open-source reporting detailing similarities between the Rhysida and Interlock ransomware variants. 1 For additional information on Rhysida ransomware, see the joint advisory, #StopRansomware: Rhy sida Ransomware . Initial Access FBI has observed Interlock actors obtaining initial access [ TA0001 ] via drive-by download [ T1189 ] from compromised legitimate websites, an atypical method for ransomware actors. Interlock ransomware methods for initial access have previously disguised malicious payloads as fake Google Chrome or Microsoft Edge browser updates, though a cybersecurity company recently reported a shift to payload filenames masquerading as updates for common security software (see Table 5 for a list of filenames). 2 In some instances, FBI has observed Interlock actors using the ClickFix social engineering technique, in which unsuspecting users are prompted to execute a malicious payload by clicking a fake Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) [ T1189 ]. The CAPTCHA contains instructions for users to open the Windows Run window, paste the clipboard contents, and then execute a malicious Base64-encoded PowerShell process [ T1204.004 ]. 3 Note : This ClickFix technique has been used in several other malware campaigns, including Lumma Stealer and DarkGate. 4 Execution and Persistence Based on FBI investigations, the fake Google Chrome browser executable functions as a remote access trojan (RAT) [ T1105 ] designed to execute a PowerShell script [ T1059.001 ] that drops a file into the Windows Startup folder. From there, the file is designed to run the RAT every time the victim logs in [ T1547.001 ], establishing persistence [ TA0003 ]. FBI also observed instances in which Interlock actors executed a PowerShell command designed to establish persistence via a Windows Registry key modification [ T1547.001 ]. To do so, Interlock actors used a PowerShell command [ T1059.001 ] designed to add a run key value named \u201cChrome Updater\u201d [ T1036.005 ] that uses a specific log file as an argument upon user login. Reconnaissance To facilitate reconnaissance, a PowerShell script executes a series of commands [ T1059.001 ] designed to gather information on victim machines (see Table 1 ). Table 1. PowerShell Commands for Reconnaissance PowerShell Command Description WindowsIdentity.GetCurrent() Returns a WindowsIdentity object that represents the current Windows user [ T1033 ].",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [],
+      "threat_category": null,
+      "severity": null,
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "e25f0071a90f54fb38184f2be65f3fb5",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "stopransomware.gov",
+            "WindowsIdentity.GetCurrent"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 937
+      }
+    },
+    {
+      "title": "Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management to Compromise Utility Billing Software Provider",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-163a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-06-12T14:29:54+00:00",
+      "scraped_at": "2026-05-16T09:34:22.073928+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary The Cybersecurity and Infrastructure Security Agency (CISA) is releasing this advisory in response to ransomware actors leveraging unpatched instances of a vulnerability in SimpleHelp Remote Monitoring and Management (RMM) to compromise customers of a utility billing software provider. This incident reflects a broader pattern of ransomware actors targeting organizations through unpatched versions of SimpleHelp RMM since January 2025. SimpleHelp versions 5.5.7 and earlier contain several vulnerabilities, including CVE-2024-57727 \u2014a path traversal vulnerability. 1 Ransomware actors likely leveraged CVE-2024-57727 to access downstream customers\u2019 unpatched SimpleHelp RMM for disruption of services in double extortion compromises. 1 CISA added CVE-2024-57727 to its Known Exploited Vulnerabilities (KEV) Catalog on Feb. 13, 2025. CISA urges software vendors, downstream customers, and end users to immediately implement the Mitigations listed in this advisory based on confirmed compromise or risk of compromise. Download the PDF version of this report: AA25-163A Ransomware Actors Exploit Unpatched SimpleHelp Remote Monitoring and Management to Compromise Utility Billing Software Provider (PDF, 420.49 KB ) Mitigations CISA recommends organizations implement the mitigations below to respond to emerging ransomware activity exploiting SimpleHelp software. These mitigations align with the Cross-Sector Cybersecurity Performance Goals (CPGs) developed by CISA and the National Institute of Standards and Technology (NIST). The CPGs provide a minimum set of practices and protections that CISA and NIST recommend all organizations implement. CISA and NIST based the CPGs on existing cybersecurity frameworks and guidance to protect against the most common and impactful threats, tactics, techniques, and procedures. Visit CISA\u2019s CPGs webpage for more information on the CPGs, including additional recommended baseline protections. These mitigations apply to all critical infrastructure organizations. Vulnerable Third-Party Vendors If SimpleHelp is embedded or bundled in vendor-owned software or if a third-party service provider leverages SimpleHelp on a downstream customer\u2019s network, then identify the SimpleHelp server version at the top of the file <file_path>/SimpleHelp/configuration/serverconfig.xml . If version 5.5.7 or prior is found or has been used since January 2025, third-party vendors should: Isolate the SimpleHelp server instance from the internet or stop the server process. Upgrade immediately to the latest SimpleHelp version in accordance with SimpleHelp\u2019s security vulnerability advisory. 2 Contact your downstream customers to direct them to take actions to secure their endpoints and undertake threat hunting actions on their network. Vulnerable Downstream Customers and End Users Determine if the system is running an unpatched version of SimpleHelp RMM either directly or embedded in third-party software. SimpleHelp Endpoints Determine if an endpoint is running the remote access (RAS) service by checking the following paths depending on the specific environment: Windows: %APPDATA%\\JWrapper-Remote Access Linux: /opt/JWrapper-Remote Access MacOs: /Library/Application Support/JWrapper-Remote Access If RAS installation is present and running, open the serviceconfig.xml file in <file_path>/JWrapper-Remote Access/JWAppsSharedConfig/ to determine if the registered service is vulnerable. The lines starting with <ConnectTo indicate the server addresses where the service is registered. SimpleHelp Server Determine the version of any SimpleHelp server by performing an HTTP query against it. Add /allversions (e.g., https://simple-help.com/allversions ) to query the URL for the version page. This page will list the running version. If an unpatched SimpleHelp version 5.5.7 or earlier is confirmed on a system, organizations should conduct threat hunting actions for evidence of compromise and continuously monitor for unusual inbound and outbound traffic from the SimpleHelp server. Note: This is not an exhaustive list of indicators of compromise. Refer to SimpleHelp\u2019s guidance to determine compromise and next steps. 3 Isolate the SimpleHelp server instance from the internet or stop the server process. Search for any suspicious or anomalous executables with three alphabetic letter filenames (e.g., aaa.exe , bbb.exe , etc.) with a creation time after January 2025. Additionally, perform host and network vulnerability security scans via reputable scanning services to verify malware is not on the system. Even if there is no evidence of compromise, users should immediately upgrade to the latest SimpleHelp version in accordance with SimpleHelp\u2019s security vulnerabilities advisory. 4 If your organization is unable to immediately identify and patch vulnerable versions of SimpleHelp, apply appropriate workarounds. In this circumstance, CISA recommends using other vendor-provided mitigations when available. These non-patching workarounds should not be considered permanent fixes and organizations should apply the appropriate patch as soon as it is made available. Encrypted Downstream Customers and End Users If a system has been encrypted by ransomware: Disconnect the affected system from the internet. Use clean installation media (e.g., a bootable USD drive or DVD) to reinstall the operating system. Ensure the installation media is free from malware. Wipe the system and only restore data from a clean backup. Ensure data files are obtained from a protected environment to avoid reintroducing ransomware to the system. CISA urges you to promptly report ransomware incidents to a local FBI Field Office , FBI\u2019s Internet Crime Compliant Center (IC3) , and CISA via CISA\u2019s 24/7 Operations Center ( report@cisa.gov or 1-844-Say-CISA). Proactive Mitigations to Reduce Risk To reduce opportunities for intrusion and to strengthen response to ransomware activity, CISA recommends customers of vendors and managed service providers (MSPs) implement the following best practices: Maintain a robust asset inventory and hardware list [ CPG 1.A ]. Maintain a clean, offline backup of the system to ensure encryption will not occur once reverted. Conduct a daily system backup on a separate, offline device, such as a flash drive or external hard drive. Remove the device from the computer after backup is complete [ CPG 2.R ]. Do not expose remote services such as Remote Desktop Protocol (RDP) on the web. If these services must be exposed, apply appropriate compensating controls to prevent common forms of abuse and exploitation. Disable unnecessary OS applications and network protocols on internet-facing assets [ CPG 2.W ]. Conduct a risk analysis for RMM software on the network. If RMM is required, ask third-party vendors what security controls are in place. Establish and maintain open communication channels with third-party vendors to stay informed about their patch management process. For software vendors, consider integrating a Software Bill of Materials (SBOM) into products to reduce the amount of time for vulnerability remediation. An SBOM is a formal record of components used to build software. SBOMs enhance supply chain risk management by quickly identifying and avoiding known vulnerabilities, identifying security requirements, and managing mitigations for vulnerabilities. For more information, see CISA\u2019s SBOM page. Resources <",
+      "summary": "Ransomware actors are exploiting unpatched instances of SimpleHelp Remote Monitoring and Management (RMM) to compromise customers of a utility billing software provider.",
+      "tags": [
+        "ransomware",
+        "vulnerability",
+        "RMM",
+        "CVE-2024-57727",
+        "SimpleHelp",
+        "unpatched"
+      ],
+      "cve_ids": [
+        "CVE-2024-57727"
+      ],
+      "threat_category": "ransomware",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:23.206211+00:00",
+      "content_hash": "507b7dce014bdf09f300bb9030256173",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "serverconfig.xml",
+            "serviceconfig.xml",
+            "cisa.gov",
+            "simple-help.com",
+            "bbb.exe",
+            "aaa.exe"
+          ],
+          "hashes": [],
+          "urls": [
+            "https://simple-help.com/allversions"
+          ]
+        },
+        "word_count": 1043
+      }
+    },
+    {
+      "title": "Russian GRU Targeting Western Logistics Entities and Technology Companies",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141a",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-05-12T16:49:12+00:00",
+      "scraped_at": "2026-05-16T09:34:22.102899+00:00",
+      "article_content": null,
+      "cleaned_content": "Executive Summary This joint cybersecurity advisory (CSA) highlights a Russian state-sponsored cyber campaign targeting Western logistics entities and technology companies. This includes those involved in the coordination, transport, and delivery of foreign assistance to Ukraine. Since 2022, Western logistics entities and IT companies have faced an elevated risk of targeting by the Russian General Staff Main Intelligence Directorate (GRU) 85th Main Special Service Center (85th GTsSS), military unit 26165\u2014tracked in the cybersecurity community under several names (see \u201c Cybersecurity Industry Tracking \u201d). The actors\u2019 cyber espionage-oriented campaign, targeting technology companies and logistics entities, uses a mix of previously disclosed tactics, techniques, and procedures (TTPs). The authoring agencies expect similar targeting and TTP use to continue. Executives and network defenders at logistics entities and technology companies should recognize the elevated threat of unit 26165 targeting, increase monitoring and threat hunting for known TTPs and indicators of compromise (IOCs), and posture network defenses with a presumption of targeting. This cyber espionage-oriented campaign targeting logistics entities and technology companies uses a mix of previously disclosed TTPs and is likely connected to these actors\u2019 wide scale targeting of IP cameras in Ukraine and bordering NATO nations. The following authors and co-sealers are releasing this CSA: United States National Security Agency (NSA) United States Federal Bureau of Investigation (FBI) United Kingdom National Cyber Security Centre (NCSC-UK) Germany Federal Intelligence Service (BND) Bundesnachrichtendienst Germany Federal Office for Information Security (BSI) Bundesamt f\u00fcr Sicherheit in der Informationstechnik Germany Federal Office for the Protection of the Constitution (BfV) Bundesamt f\u00fcr Verfassungsschutz Czech Republic Military Intelligence (VZ) Vojensk\u00e9 zpravodajstv\u00ed Czech Republic National Cyber and Information Security Agency (N\u00daKIB) N\u00e1rodn\u00ed \u00fa\u0159ad pro kybernetickou a informa\u010dn\u00ed bezpe\u010dnost Czech Republic Security Information Service (BIS) Bezpe\u010dnostn\u00ed informa\u010dn\u00ed slu\u017eba Poland Internal Security Agency (ABW) Agencja Bezpiecze\u0144stwa Wewn\u0119trznego Poland Military Counterintelligence Service (SKW) S\u0142u\u017cba Kontrwywiadu Wojskowego United States Cybersecurity and Infrastructure Security Agency (CISA) United States Department of Defense Cyber Crime Center (DC3) United States Cyber Command (USCYBERCOM) Australian Signals Directorate\u2019s Australian Cyber Security Centre (ASD\u2019s ACSC) Canadian Centre for Cyber Security (Cyber Centre) Danish Defence Intelligence Service (DDIS) Forsvarets Efterretningstjeneste Estonian Foreign Intelligence Service (EFIS) V\u00e4lisluureamet Estonian National Cyber Security Centre (NCSC-EE) K\u00fcberturvalisuse keskus French Cybersecurity Agency (ANSSI) Agence nationale de la s\u00e9curit\u00e9 des syst\u00e8mes d'information Netherlands Defence Intelligence and Security Service (MIVD) Militaire Inlichtingen- en Veiligheidsdienst Download the PDF version of this report: Russian GRU Targeting Western Logistics Entities and Technology Companies (PDF, 965KB) For a downloadable list of IOCs, visit: AA25-141A STIX XML (xml, 117.02 KB) AA25-141A STIX JSON (json, 144.29 KB) Introduction For over two years, the Russian GRU 85th GTsSS, military unit 26165\u2014commonly known in the cybersecurity community as APT28, Fancy Bear, Forest Blizzard, BlueDelta, and a variety of other identifiers\u2014has conducted this campaign using a mix of known tactics, techniques, and procedures (TTPs), including reconstituted password spraying capabilities, spearphishing, and modification of Microsoft Exchange mailbox permissions. In late February 2022, multiple Russian state-sponsored cyber actors increased the variety of cyber operations for purposes of espionage, destruction, and influence\u2014with unit 26165 predominately involved in espionage. [ 1 ] As Russian military forces failed to meet their military objectives and Western countries provided aid to support Ukraine\u2019s territorial defense, unit 26165 expanded its targeting of logistics entities and technology companies involved in the delivery of aid. These actors have also targeted Internet-connected cameras at Ukrainian border crossings to monitor and track aid shipments. Note: This advisory uses the MITRE ATT&CK\u00ae for Enterprise framework, version 17. See Appendix A: MITRE ATT&CK tactics and techniques for a table of the threat actors\u2019 activity mapped to MITRE ATT&CK tactics and techniques. This advisory uses the MITRE D3FEND\u00ae framework, version 1.0. Description of Targets The GRU unit 26165 cyber campaign against Western logistics providers and technology companies has targeted dozens of entities, including government organizations and private/commercial entities across virtually all transportation modes: air, sea, and rail. These actors have targeted entities associated with the following verticals within NATO member states, Ukraine, and at international organizations: Defense Industry Transportation and Transportation Hubs (ports, airports, etc.) Maritime Air Traffic Management IT Services In the course of the targeting lifecycle, unit 26165 actors identified and conducted follow-on targeting of additional entities in the transportation sector that had business ties to the primary target, exploiting trust relationships to attempt to gain additional access [ T1199 ]. The actors also conducted reconnaissance on at least one entity involved in the production of industrial control system (ICS) components for railway management, though a successful compromise was not confirmed [ TA0043 ]. The countries with targeted entities include the following, as illustrated in Figure 1 : Bulgaria Czech Republic France Germany Greece Italy Moldova Netherlands Poland Romania Slovakia Ukraine United States Figure 1: Countries with Targeted Entities Initial Access TTPs To gain initial access to targeted entities, unit 26165 actors used several techniques to gain initial access to targeted entities, including (but not limited to): Credential guessing [ T1110.001 ] / brute force [ T1110.003 ] Spearphishing for credentials [ T1566 ] Spearphishing delivering malware [ T1566 ] Outlook NTLM vulnerability ( CVE-2023-23397 ) Roundcube vulnerabilities ( CVE-2020-12641 , CVE-2020-35730 , CVE-2021-44026 ) Exploitation of Internet-facing infrastructure, including corporate VPNs [ T1133 ], via public vulnerabilities and SQL injection [ T1190 ] Exploitation of WinRAR vulnerability ( CVE-2023-38831 ) The actors abused vulnerabilities associated with a range of brands and mod",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [
+        "CVE-2023-38831",
+        "CVE-2021-44026",
+        "CVE-2023-23397",
+        "CVE-2020-35730",
+        "CVE-2020-12641"
+      ],
+      "threat_category": null,
+      "severity": null,
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "251583b1668f8a92cd4d227243de303c",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 890
+      }
+    },
+    {
+      "title": "Threat Actors Deploy LummaC2 Malware to Exfiltrate Sensitive Data from Organizations",
+      "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141b",
+      "source": "CISA Alerts",
+      "author": "CISA",
+      "published_date": "2025-05-20T19:20:23+00:00",
+      "scraped_at": "2026-05-16T09:34:22.110970+00:00",
+      "article_content": null,
+      "cleaned_content": "Summary The Federal Bureau of Investigation (FBI) and the Cybersecurity and Infrastructure Security Agency (CISA) are releasing this joint advisory to disseminate known tactics, techniques, and procedures (TTPs) and indicators of compromise (IOCs) associated with threat actors deploying the LummaC2 information stealer (infostealer) malware. LummaC2 malware is able to infiltrate victim computer networks and exfiltrate sensitive information, threatening vulnerable individuals\u2019 and organizations\u2019 computer networks across multiple U.S. critical infrastructure sectors. According to FBI information and trusted third-party reporting, this activity has been observed as recently as May 2025. The IOCs included in this advisory were associated with LummaC2 malware infections from November 2023 through May 2025. The FBI and CISA encourage organizations to implement the recommendations in the Mitigations section of this advisory to reduce the likelihood and impact of LummaC2 malware. Download the PDF version of this report: AA25-141B Threat Actors Deploy LummaC2 Malware to Exfiltrate Sensitive Data from Organizations (PDF, 1.28 MB ) For a downloadable copy of IOCs, see: AA25-141B STIX XML (XML, 146.54 KB ) AA25-141B STIX JSON (JSON, 300.90 KB ) Technical Details Note: This advisory uses the MITRE ATT&CK \u00ae Matrix for Enterprise framework, version 17. See the MITRE ATT&CK Tactics and Techniques section of this advisory for threat actor activity mapped to MITRE ATT&CK tactics and techniques. Overview LummaC2 malware first appeared for sale on multiple Russian-language speaking cybercriminal forums in 2022. Threat actors frequently use spearphishing hyperlinks and attachments to deploy LummaC2 malware payloads [ T1566.001 , T1566.002 ]. Additionally, threat actors rely on unsuspecting users to execute the payload by clicking a fake Completely Automated Public Turing Test to tell Computers and Humans Apart (CAPTCHA). The CAPTCHA contains instructions for users to then open the Windows Run window (Windows Button + R) and paste clipboard contents (\u201cCTRL + V\u201d). After users press \u201center\u201d a subsequent Base64-encoded PowerShell process is executed. To obfuscate their operations, threat actors have embedded and distributed LummaC2 malware within spoofed or fake popular software (i.e., multimedia player or utility software) [ T1036 ]. The malware\u2019s obfuscation methods allow LummaC2 actors to bypass standard cybersecurity measures, such as Endpoint Detection and Response (EDR) solutions or antivirus programs, designed to flag common phishing attempts or drive-by downloads [ T1027 ]. Once a victim\u2019s computer system is infected, the malware can exfiltrate sensitive user information, including personally identifiable information, financial credentials, cryptocurrency wallets, browser extensions, and multifactor authentication (MFA) details without immediate detection [ TA0010 , T1119 ]. Private sector statistics indicate there were more than 21,000 market listings selling LummaC2 logs on multiple cybercriminal forums from April through June of 2024, a 71.7 percent increase from April through June of 2023. File Execution Upon execution, the LummaC2.exe file will enter its main routine, which includes four sub-routines (see Figure 1 ). Figure 1. LummaC2 Main Routine The first routine decrypts strings for a message box that is displayed to the user (see Figure 2 ). Figure 2. Message Box If the user selects No , the malware will exit. If the user selects Yes , the malware will move on to its next routine, which decrypts its callback Command and Control (C2) domains [ T1140 ]. A list of observed domains is included in the Indicators of Compromise section. After each domain is decoded, the implant will attempt a POST request [ T1071.001 ] (see Figure 3 ). Figure 3. Post Request If the POST request is successful, a pointer to the decoded domain string is saved in a global variable for later use in the main C2 routine used to retrieve JSON formatted commands (see Figure 4 ). Figure 4. Code Saving Successful Callback Request Once a valid C2 domain is contacted and saved, the malware moves on to the next routine, which queries the user\u2019s name and computer name utilizing the Application Programming Interfaces (APIs) GetUserNameW and GetComputerNameW respectively [ T1012 ]. The returned data is then hashed and compared against a hard-coded hash value (see Figure 5 ). Figure 5. User and Computer Name Check The hashing routine was not identified as a standard algorithm; however, it is a simple routine that converts a Unicode string to a 32-bit hexadecimal value. If the username hash is equal to the value 0x56CF7626 , then the computer name is queried. If the computer name queried is seven characters long, then the name is hashed and checked against the hard-coded value of 0xB09406C7 . If both values match, a final subroutine will be called with a static value of the computer name hash as an argument. If this routine is reached, the process will terminate. This is most likely a failsafe to prevent the malware from running on the attacker\u2019s system, as its algorithms are one-way only and will not reveal information on the details of the attacker\u2019s own hostname and username. If the username and hostname check function returns zero (does not match the hard-coded values), the malware will enter its main callback routine. The LummaC2 malware will contact the saved hostname from the previous check and send the following POST request (see Figure 6 ).",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [],
+      "threat_category": null,
+      "severity": null,
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "16cae098e1b1a4730f852057f247a0c4",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "LummaC2.exe"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 848
+      }
+    },
+    {
+      "title": "[medium] AVideo CVE-2026-43884 incomplete fix - six (or more) `isSSRFSafeURL()` call sites still discard the `$resolvedIP` out-param at master HEAD post-`603e7bf`",
+      "url": "https://github.com/advisories/GHSA-c3ch-22rq-xfwr",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:35:38Z",
+      "scraped_at": "2026-05-16T09:34:22.111222+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [
+        "CVE-2026-43884"
+      ],
+      "threat_category": null,
+      "severity": "medium",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "3f68d2af9cb5b530e83c8d85db5f0cb2",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[medium] AVideo: 2FA toggle endpoint has no CSRF protection, letting an attacker page silently disable a logged-in victim's 2FA",
+      "url": "https://github.com/advisories/GHSA-3mv2-vmwh-rwfx",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:34:57Z",
+      "scraped_at": "2026-05-16T09:34:22.111289+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "A vulnerability in the 2FA toggle endpoint of AVideo allows an attacker to silently disable a logged-in victim's 2FA without any CSRF protection.",
+      "tags": [
+        "2FA",
+        "CSRF",
+        "vulnerability",
+        "AVideo"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "CRITICAL",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:24.543387+00:00",
+      "content_hash": "ac43152483081691fc069f988591e48a",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[medium] AVideo: stored XSS via unescaped stream key in modeYoutubeLive.php class attribute",
+      "url": "https://github.com/advisories/GHSA-m5j4-7r85-2cj2",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:33:58Z",
+      "scraped_at": "2026-05-16T09:34:22.111337+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "A stored XSS vulnerability was discovered in the modeYoutubeLive.php class attribute due to an unescaped stream key, allowing attackers to inject malicious code.",
+      "tags": [
+        "XSS",
+        "web vulnerability",
+        "stored XSS"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "HIGH",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:31.812893+00:00",
+      "content_hash": "2b1e7acb72aa341dad3960917a89b466",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "modeYoutubeLive.php"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[high] AVideo: OS command injection in on_publish.php execAsync via unescaped m3u8 URL",
+      "url": "https://github.com/advisories/GHSA-xw67-cg5f-4m2r",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:32:36Z",
+      "scraped_at": "2026-05-16T09:34:22.111378+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": "AVideo's on_publish.php is vulnerable to OS command injection via unescaped m3u8 URL, allowing attackers to execute arbitrary system commands.",
+      "tags": [
+        "OS command injection",
+        "PHP",
+        "web-attack",
+        "AVideo"
+      ],
+      "cve_ids": [],
+      "threat_category": "web-attack",
+      "severity": "HIGH",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": true,
+      "ai_processed_at": "2026-05-16T09:36:40.323928+00:00",
+      "content_hash": "51bb47eee674050bb5528855c8f46f73",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    },
+    {
+      "title": "[high] Improper Verification of Cryptographic Signature in com.oviva.telematik:epa4all-client",
+      "url": "https://github.com/advisories/GHSA-gqx7-6552-67hf",
+      "source": "GitHub Security Advisories",
+      "author": null,
+      "published_date": "2026-05-15T18:30:48Z",
+      "scraped_at": "2026-05-16T09:34:22.111420+00:00",
+      "article_content": null,
+      "cleaned_content": "",
+      "summary": null,
+      "tags": [],
+      "cve_ids": [],
+      "threat_category": null,
+      "severity": "high",
+      "is_india_related": false,
+      "india_keywords": null,
+      "ai_processed": false,
+      "ai_processed_at": null,
+      "content_hash": "683eddd588a53eb799b6abf11fb80e98",
+      "metadata": {
+        "original_source_type": "rss",
+        "iocs_extracted": {
+          "ips": [],
+          "domains": [
+            "com.oviva.telematik"
+          ],
+          "hashes": [],
+          "urls": []
+        },
+        "word_count": 0
+      }
+    }
+  ],
+  "recommendations": [
+    "Patch critical CVEs immediately: CVE-2026-42897, CVE-2026-20182, CVE-2026-42208",
+    "Review ransomware preparedness and backup procedures",
+    "Prioritize patching vulnerabilities with active exploits",
+    "Update all systems with latest security patches",
+    "Review and validate backup integrity"
+  ],
+  "source_count": 17
+}

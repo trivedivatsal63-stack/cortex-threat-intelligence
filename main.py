@@ -196,7 +196,8 @@ class ThreatIntelPipeline:
         except Exception as e:
             logger.error(f"IOC extraction failed: {e}")
         
-        # Process India-specific data
+        # Process India-specific data (clear dedup to avoid collision with article hashes)
+        global_dedup._seen.clear()
         try:
             processed["india_alerts"] = self.india_processor.process_alerts(
                 raw_data.get("india_alerts", [])
