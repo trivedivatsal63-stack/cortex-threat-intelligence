@@ -462,15 +462,22 @@ export default function Dashboard() {
 
   const fetchThreats = useCallback(async () => {
     try {
-      let query = supabase
-        .from("threats")
-        .select("*")
-        .order("created_at", { ascending: false })
-        .limit(500);
-
-      const { data, error } = await query;
-      if (error) throw error;
-      setThreats(data || []);
+      let all: Threat[] = [];
+      let from = 0;
+      const pageSize = 1000;
+      while (true) {
+        const { data, error } = await supabase
+          .from("threats")
+          .select("*")
+          .order("created_at", { ascending: false })
+          .range(from, from + pageSize - 1);
+        if (error) throw error;
+        if (!data || data.length === 0) break;
+        all = [...all, ...data];
+        if (data.length < pageSize) break;
+        from += pageSize;
+      }
+      setThreats(all);
       setLastUpdated(new Date());
     } catch (err) {
       console.error("Failed to fetch threats:", err);
