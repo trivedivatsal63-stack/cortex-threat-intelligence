@@ -137,6 +137,12 @@ Severity: {severity}"""
             scored += 1
             print(f"[scorer] Scored {idx}/{total}: {title}")
 
+        except APIStatusError as e:
+            if e.status_code == 429:
+                print("[scorer] Rate limit reached — stopping for today. Will resume next run.")
+                break
+            errors += 1
+            print(f"[scorer] Error {idx}/{total}: {title} — {e}")
         except Exception as e:
             errors += 1
             print(f"[scorer] Error {idx}/{total}: {title} — {e}")
