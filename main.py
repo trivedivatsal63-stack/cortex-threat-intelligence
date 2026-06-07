@@ -3,6 +3,7 @@ from collections import Counter
 
 from cortex.collectors.feed_collector import collect_all
 from cortex.database.supabase_client import save_threats, get_recent_threats
+from cortex.ai.scorer import score_threats
 
 
 def run_collect():
@@ -49,19 +50,30 @@ def run_summary():
             print(f"  {sev}: {count}")
 
 
+def run_score():
+    print("=" * 50)
+    print("CORTEX — AI Threat Scoring")
+    print("=" * 50)
+    score_threats()
+
+
 def main():
     if len(sys.argv) > 1:
         arg = sys.argv[1]
         if arg == "--collect":
             run_collect()
+        elif arg == "--score":
+            run_score()
         elif arg == "--summary":
             run_summary()
         else:
             print(f"Unknown argument: {arg}")
-            print("Usage: python main.py [--collect | --summary]")
+            print("Usage: python main.py [--collect | --score | --summary]")
             sys.exit(1)
     else:
         run_collect()
+        print()
+        run_score()
         print()
         run_summary()
 
