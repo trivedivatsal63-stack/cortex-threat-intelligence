@@ -457,6 +457,7 @@ export default function Dashboard() {
   const [lastUpdated, setLastUpdated] = useState<Date>(new Date());
   const [severityFilter, setSeverityFilter] = useState<string | null>(null);
   const [sourceFilter, setSourceFilter] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const [page, setPage] = useState(1);
   const [selectedThreat, setSelectedThreat] = useState<Threat | null>(null);
 
@@ -495,6 +496,11 @@ export default function Dashboard() {
   const filtered = threats.filter((t) => {
     if (severityFilter && t.severity !== severityFilter) return false;
     if (sourceFilter && t.source !== sourceFilter) return false;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      const fields = [t.title, t.description, t.ai_summary, t.affected_systems];
+      if (!fields.some((f) => f && f.toLowerCase().includes(q))) return false;
+    }
     return true;
   });
 
@@ -503,7 +509,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     setPage(1);
-  }, [severityFilter, sourceFilter]);
+  }, [severityFilter, sourceFilter, searchQuery]);
 
   const totalThreats = threats.length;
   const aiScored = threats.filter((t) => t.ai_scored_at).length;
@@ -593,6 +599,46 @@ export default function Dashboard() {
           <StatCard label="Total Threats" value={totalThreats} color="#00d4ff" />
           <StatCard label="AI Scored" value={aiScored} color="#06d6a0" />
           <StatCard label="Critical Today" value={criticalToday} color="#ff3366" />
+        </div>
+
+        <div className="relative mb-4">
+          <div className="relative">
+            <svg
+              className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+              width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search threats, CVE IDs, keywords..."
+              className="w-full text-sm rounded-xl px-10 py-3 outline-none transition-all duration-200 placeholder:text-white/20"
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                color: "rgba(255,255,255,0.8)",
+              }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = "rgba(0,212,255,0.3)"; e.currentTarget.style.background = "rgba(0,212,255,0.04)"; }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; e.currentTarget.style.background = "rgba(255,255,255,0.03)"; }}
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/20 hover:text-white/50 transition-colors"
+              >
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            )}
+          </div>
+          {searchQuery && (
+            <div className="mt-2 text-xs text-white/30">
+              {filtered.length} result{filtered.length !== 1 ? "s" : ""} for &apos;{searchQuery}&apos;
+            </div>
+          )}
         </div>
 
         <div className="flex flex-wrap items-center gap-2 mb-6 pb-4 border-b border-white/5">
