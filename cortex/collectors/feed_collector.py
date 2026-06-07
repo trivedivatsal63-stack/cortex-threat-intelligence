@@ -2,7 +2,6 @@ import json
 import time
 from datetime import datetime, timedelta, timezone
 from typing import Any
-from xml.etree import ElementTree
 
 import feedparser
 import requests
@@ -30,6 +29,10 @@ def _severity_from_cvss(score: float | None) -> str:
     if score >= 4.0:
         return "MEDIUM"
     return "LOW"
+
+
+def _safe_date(val: str) -> str:
+    return val if val else datetime.now(timezone.utc).isoformat()
 
 
 def collect_nvd() -> list[dict[str, Any]]:
@@ -68,7 +71,7 @@ def collect_nvd() -> list[dict[str, Any]]:
             "description": description[:2000],
             "source": "NVD",
             "severity": severity,
-            "published_date": published,
+            "published_date": _safe_date(published),
             "url": f"https://nvd.nist.gov/vuln/detail/{cve_id}",
             "raw_data": json.dumps(cve),
         })
@@ -96,7 +99,7 @@ def collect_cisa_kev() -> list[dict[str, Any]]:
             "description": vuln.get("shortDescription", "")[:2000],
             "source": "CISA_KEV",
             "severity": "CRITICAL",
-            "published_date": vuln.get("dateAdded", ""),
+            "published_date": _safe_date(vuln.get("dateAdded", "")),
             "url": f"https://nvd.nist.gov/vuln/detail/{cve_id}",
             "raw_data": json.dumps(vuln),
         })
@@ -125,19 +128,14 @@ def collect_hacker_news() -> list[dict[str, Any]]:
             "description": desc,
             "source": "TheHackerNews",
             "severity": "UNKNOWN",
-            "published_date": published,
+            "published_date": _safe_date(published),
             "url": link,
             "raw_data": json.dumps(entry, default=str),
         })
     return items
 
 
-def collect_cert_in() -> list[dict[str, Any]]:
-    url = "https://www.cert-in.org.in/s2c-MainServlet?pageid=PDFRSS&rssid=CIVICAlerts"
-    raw = _fetch(url)
-    if not raw:
-        return []
-
+def _parse_rss_entries(raw: str, source: str, severity: str = "HIGH") -> list[dict[str, Any]]:
     feed = feedparser.parse(raw)
     items: list[dict[str, Any]] = []
     for entry in feed.entries[:20]:
@@ -152,12 +150,34 @@ def collect_cert_in() -> list[dict[str, Any]]:
         items.append({
             "title": title,
             "description": desc,
-            "source": "CERT-In",
-            "severity": "HIGH",
-            "published_date": published,
+            "source": source,
+            "severity": severity,
+            "published_date": _safe_date(published),
             "url": link,
             "raw_data": json.dumps(entry, default=str),
         })
+    return items
+
+
+def collect_ncsc_uk() -> list[dict[str, Any]]:
+    url = "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml"
+    raw = _fetch(url, headers={"User-Agent": "Mozilla/5.0"})
+    if not raw:
+        print("[ncsc_uk] Failed to fetch RSS feed")
+        return []
+    items = _parse_rss_entries(raw, source="NCSC_UK", severity="HIGH")
+    print(f"[ncsc_uk] Collected {len(items)} items")
+    return items
+
+
+def collect_jpcert() -> list[dict[str, Any]]:
+    url = "https://www.jpcert.or.jp/english/rss/jpcert-en.rdf"
+    raw = _fetch(url)
+    if not raw:
+        print("[jpcert] Failed to fetch RSS feed")
+        return []
+    items = _parse_rss_entries(raw, source="JPCERT", severity="HIGH")
+    print(f"[jpcert] Collected {len(items)} items")
     return items
 
 
@@ -190,7 +210,7 @@ def collect_alienvault_otx() -> list[dict[str, Any]]:
             "description": desc,
             "source": "AlienVault_OTX",
             "severity": severity,
-            "published_date": created,
+            "published_date": _safe_date(created),
             "url": pulse.get("url", ""),
             "raw_data": json.dumps(pulse, default=str),
         })
@@ -203,7 +223,8 @@ def collect_all() -> dict[str, list[dict[str, Any]]]:
         "nvd": collect_nvd(),
         "cisa_kev": collect_cisa_kev(),
         "hacker_news": collect_hacker_news(),
-        "cert_in": collect_cert_in(),
+        "ncsc_uk": collect_ncsc_uk(),
+        "jpcert": collect_jpcert(),
         "alienvault_otx": collect_alienvault_otx(),
     }
     total = sum(len(v) for v in results.values())
